@@ -1,0 +1,42 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Beers Earned</string>
+    <string id="BeersLabel">Beers</string>
+    <string id="AlertTitle">Cheers!</string>
+
+    <string id="SettingsCaloriesPerBeer">kcal per beer</string>
+    <string id="SettingsBeerStyle">Beer</string>
+    <string id="SettingsGlassShape">Glass</string>
+    <string id="SettingsBackground">Background</string>
+    <string id="SettingsRounding">Counting</string>
+    <string id="SettingsStartingBeers">Beers at start</string>
+    <string id="SettingsAlertPopup">Pop-up per beer</string>
+    <string id="SettingsAlertVibrate">Vibrate per beer</string>
+    <string id="SettingsAlertTone">Tone per beer</string>
+
+    <string id="StyleAmber">Amber / Lager</string>
+    <string id="StyleRedAle">Red Ale</string>
+    <string id="StyleStout">Stout / Porter</string>
+    <string id="StylePils">Pilsner / Helles</string>
+    <string id="StyleWheat">Hefeweizen</string>
+
+    <string id="ShapeMug">Mug</string>
+    <string id="ShapeWeizen">Wheat beer glass</string>
+    <string id="ShapePint">Pint glass</string>
+    <string id="ShapeBottle">Bottle</string>
+
+    <string id="BgAuto">Automatic</string>
+    <string id="BgBlack">Black</string>
+    <string id="BgWhite">White</string>
+
+    <string id="RoundDown">Whole beers</string>
+    <string id="RoundNearest">Rounded</string>
+    <string id="RoundUp">Rounded up</string>
+    <string id="RoundExact">One decimal</string>
+
+    <!-- Garmin Connect labels for the recorded FIT fields -->
+    <string id="FitChartTitle">Beers Earned</string>
+    <string id="FitBeersLabel">Beers</string>
+    <string id="FitTotalLabel">Beers Earned</string>
+    <string id="FitLapLabel">Beers</string>
+    <string id="FitUnits">beers</string>
+</strings>

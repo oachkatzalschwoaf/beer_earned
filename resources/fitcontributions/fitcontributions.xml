@@ -1,0 +1,13 @@
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <!-- How Garmin Connect shows the FIT fields created in BeersEarnedView.initialize().
+         Field ids must match the FIELD_* constants there. -->
+    <fitContributions>
+        <fitField id="0" displayInChart="true" sortOrder="0" precision="1"
+            chartTitle="@Strings.FitChartTitle" dataLabel="@Strings.FitBeersLabel"
+            unitLabel="@Strings.FitUnits" fillColor="#FFAA00" />
+        <fitField id="1" displayInActivitySummary="true" sortOrder="1" precision="1"
+            dataLabel="@Strings.FitTotalLabel" unitLabel="@Strings.FitUnits" />
+        <fitField id="2" displayInActivityLaps="true" sortOrder="2" precision="1"
+            dataLabel="@Strings.FitLapLabel" unitLabel="@Strings.FitUnits" />
+    </fitContributions>
+</resources>

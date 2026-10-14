@@ -1,0 +1,49 @@
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <setting propertyKey="@Properties.caloriesPerBeer" title="@Strings.SettingsCaloriesPerBeer">
+        <settingConfig type="numeric" min="10" max="5000"/>
+    </setting>
+    <setting propertyKey="@Properties.beerStyle" title="@Strings.SettingsBeerStyle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.StylePils</listEntry>
+            <listEntry value="1">@Strings.StyleWheat</listEntry>
+            <listEntry value="2">@Strings.StyleAmber</listEntry>
+            <listEntry value="3">@Strings.StyleRedAle</listEntry>
+            <listEntry value="4">@Strings.StyleStout</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.glassShape" title="@Strings.SettingsGlassShape">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ShapeMug</listEntry>
+            <listEntry value="1">@Strings.ShapeWeizen</listEntry>
+            <listEntry value="2">@Strings.ShapePint</listEntry>
+            <listEntry value="3">@Strings.ShapeBottle</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.background" title="@Strings.SettingsBackground">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.BgAuto</listEntry>
+            <listEntry value="1">@Strings.BgBlack</listEntry>
+            <listEntry value="2">@Strings.BgWhite</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.roundingMode" title="@Strings.SettingsRounding">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.RoundDown</listEntry>
+            <listEntry value="1">@Strings.RoundNearest</listEntry>
+            <listEntry value="2">@Strings.RoundUp</listEntry>
+            <listEntry value="3">@Strings.RoundExact</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.startingBeers" title="@Strings.SettingsStartingBeers">
+        <settingConfig type="numeric" min="0" max="1000"/>
+    </setting>
+    <setting propertyKey="@Properties.alertPopup" title="@Strings.SettingsAlertPopup">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.alertVibrate" title="@Strings.SettingsAlertVibrate">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.alertTone" title="@Strings.SettingsAlertTone">
+        <settingConfig type="boolean"/>
+    </setting>
+</settings>
