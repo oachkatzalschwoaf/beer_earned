@@ -1,1 +1,4 @@
 project.manifest = manifest.xml
+
+# tests/ only contributes (:test) code, which the compiler strips unless --unit-test is set.
+base.sourcePath = source;tests
