@@ -1,0 +1,11 @@
+# Connect IQ build output (monkeyc / VS Code Monkey C extension)
+bin/
+build/
+*.prg
+*.prg.debug.xml
+*.iq
+
+# Signing keys stay outside the repo; this is a safety net in case one is copied in.
+developer_key*
+*.der
+*.pem
