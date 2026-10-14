@@ -17,44 +17,61 @@ Einfügen, auf Englisch und Deutsch.
   Die Texte sind deshalb als Spaß formuliert und enthalten „Bitte verantwortungsvoll
   genießen". Diese Zeile drin lassen.
 
+## Adressen
+
+- Upload: <https://apps.garmin.com/en-US/developer/upload>
+- Dashboard (eigene Apps, Updates): <https://apps.garmin.com/developer/dashboard>,
+  oder auf apps.garmin.com oben rechts **Developer**
+- Richtlinien: <https://developer.garmin.com/connect-iq/app-review-guidelines/> und für
+  Bilder <https://developer.garmin.com/brand-guidelines/connect-iq/>
+
 ## 1. Optional: privat als Beta testen
 
-Mit einer Beta-App kann man Einstellungen in der Connect-IQ-App und die Diagramme in
-Garmin Connect testen, ohne öffentlich zu releasen.
+Eine Beta kann nur dein Konto installieren. Damit lassen sich die Einstellungen in der
+Connect-IQ-App und die Diagramme in Garmin Connect prüfen. Sideloadete `.prg`-Dateien können
+beides nicht.
 
-1. In `manifest.xml` die `id` vorübergehend auf die Beta-ID setzen:
+1. Eine per USB installierte `.prg` aus `GARMIN\Apps\` löschen, sonst ist das Feld doppelt
+   auf der Uhr.
+2. In `manifest.xml` die `id` vorübergehend auf die Beta-ID setzen:
    `d6b7b203-5652-4231-9b24-8026f0f21b43`
-2. *Monkey C: Export Project* ausführen. Das erzeugt eine `.iq`-Datei.
-3. Im Developer-Portal hochladen und dabei **„Beta App"** anhaken. Die App ist nur für
-   dein Konto sichtbar.
-4. Über die Connect-IQ-App auf die Uhr laden, eine Aktivität aufzeichnen und speichern.
-   Dann in Garmin Connect prüfen: das Diagramm „Beers Earned", die Summe in der
-   Zusammenfassung und die Biere pro Runde.
-5. Danach die `id` wieder auf `f1c3eaf0-6044-4f43-9e94-b4e38eb170b0` zurücksetzen.
+3. *Monkey C: Export Project* ausführen. Im Assistenten reicht **Finish**. Das erzeugt eine
+   `.iq`-Datei.
+4. Auf der Upload-Seite die `.iq` wählen und auf derselben ersten Seite **Beta App**
+   anhaken.
+5. Mit demselben Garmin-Konto über die Connect-IQ-App auf die Uhr installieren. Eine
+   Aktivität aufzeichnen und speichern, dann in Garmin Connect prüfen: das Diagramm „Beers
+   Earned", die Summe in der Zusammenfassung und die Biere pro Runde.
+6. Danach die `id` in `manifest.xml` wieder auf `f1c3eaf0-6044-4f43-9e94-b4e38eb170b0`
+   zurücksetzen.
 
-Vorher eine per USB installierte `.prg` aus `GARMIN\Apps\` löschen, sonst ist das Feld
-doppelt auf der Uhr.
+Eine Beta lässt sich nicht in eine normale App umwandeln. Sie bleibt eine eigene App mit
+eigener ID und kann im Dashboard gelöscht werden.
 
 ## 2. Release
 
-1. Garmin-Developer-Konto: <https://developer.garmin.com/connect-iq/> → Anmelden →
-   Developer Agreement akzeptieren.
-2. `.iq` exportieren: VS Code → *Monkey C: Export Project*. Alternativ über die
-   Kommandozeile:
-   `monkeyc -e -r -f monkey.jungle -o BeersEarned.iq -y <developer_key>`
-3. Im Developer-Bereich des Stores (apps.garmin.com → Developer → *Submit an App*) die
-   `.iq` hochladen. Die Geräteliste kommt automatisch aus dem Manifest.
-4. Formular ausfüllen:
+1. `.iq` mit der richtigen App-ID (`f1c3eaf0-…`) exportieren: in VS Code *Monkey C: Export
+   Project*, oder über die Kommandozeile
+   `monkeyc -e -r -f monkey.jungle -o bin/BeersEarned.iq -y <developer_key>`.
+2. Auf der Upload-Seite die `.iq` hochladen, **ohne** Beta-Haken. Beim ersten Mal das
+   Developer Agreement akzeptieren. Garmin prüft das Paket; die Geräteliste kommt aus dem
+   Manifest.
+3. Danach öffnet sich der Editor für die App-Details:
    - **Titel, Beschreibung, Neuigkeiten** je Sprache mit den Texten unten
-   - **Preis:** kostenlos
-   - **Icon**, falls verlangt: `store/store_icon_512.png`
+   - **Icon:** `store/store_icon_500.png`
    - **Screenshots:** `store/screenshots/*.png`
-   - **Version**, falls gefragt: `1.0.0`
-5. Absenden. Das Review dauert laut Garmin meist bis zu 72 Stunden; das Ergebnis kommt
-   per E-Mail.
+   - **Cover Image & Icons**, optional: Hero-Bild `store/hero_1440x720.png`. Unter **Yes**
+     die On-Device-Icons: `store/ondevice_icon_amoled_128.png` für Farbgeräte wie epix und
+     Venu, `store/ondevice_icon_mip_128.png` für 64-Farben-Geräte wie fēnix.
+   - **Activity Types:** die Sportarten, zu denen das Feld passt, z. B. Laufen, Radfahren,
+     Wandern
+   - **Preis:** kostenlos, also nicht als zahlungspflichtig markieren
+4. Absenden. Die App steht dann auf *pending*: Du kannst sie schon selbst laden, öffentlich
+   ist sie noch nicht. Garmin prüft sie laut SDK-Doku meist innerhalb von 72 Stunden. Das
+   Ergebnis kommt per E-Mail, bei Ablehnung mit Begründung.
 
-Für Updates: dieselbe App-ID, derselbe Schlüssel, höhere Versionsnummer, *Upload new
-version*.
+Für Updates: dieselbe App-ID, derselbe Schlüssel. Neue `.iq` exportieren und im Dashboard
+bei der App als neue Version hochladen.
 
 ## Listing-Texte
 
@@ -112,7 +129,12 @@ version*.
 
 ## Store-Material
 
+Die Maße folgen Garmins Brand Guidelines.
+
 | Datei | Inhalt |
 |---|---|
-| `store/store_icon_512.png` | Store-Icon 512×512, aus `store/store_icon.svg` |
-| `store/screenshots/` | Screenshots aus dem Simulator (fēnix 8 47 mm und 51 mm Solar) |
+| `store/store_icon_500.png` | Store-Icon 500×500, sRGB, opaker Hintergrund, über 10 px Rand. Quelle: `store/store_icon.svg` |
+| `store/hero_1440x720.png` | Hero- bzw. Cover-Bild 1440×720, ohne Text, gilt also für alle Sprachen |
+| `store/ondevice_icon_amoled_128.png` | On-Device-Store-Icon 128×128 für Farbdisplays |
+| `store/ondevice_icon_mip_128.png` | dasselbe auf die 64-Farben-Palette der MIP-Displays reduziert |
+| `store/screenshots/` | Simulator-Screenshots (fēnix 8 47 mm und fēnix 8 Solar 51 mm) |
