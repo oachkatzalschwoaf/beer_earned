@@ -134,7 +134,9 @@ class BeerPainter {
         if (mode == 0) {
             _fitCount(x, y, w, h);
         } else {
+            var ty = _ty;
             drawVessel(_gx, _top, _gh, mode == 1);
+            _ty = ty; // the shell moved it to the in-vessel text position
         }
         if (mode != 1) {
             _dc.setColor(_s.fg, Graphics.COLOR_TRANSPARENT);
@@ -362,12 +364,12 @@ class BeerPainter {
     private function _band(y0 as Float, y1 as Float) as Void {
         if (_prof != null) {
             _dc.fillPolygon(_polygon(_wall, y0, y1));
-        } else if (y1 < _iB - _iR) {
-            _dc.fillRectangle(_iL, y0, _iW, y1 - y0);
         } else {
-            // Reaches the rounded bottom: round only the lower corners.
-            _dc.fillRoundedRectangle(_iL, y0, _iW, y1 - y0, _iR);
-            _dc.fillRectangle(_iL, y0, _iW, (y1 - y0 < _iR) ? y1 - y0 : _iR);
+            // The mug's whole rounded interior, clipped to the band, so the corners
+            // stay round however low or high the band sits.
+            _dc.setClip(_iL, y0, _iW, y1 - y0 + 1);
+            _dc.fillRoundedRectangle(_iL, _iT, _iW, _iB - _iT, _iR);
+            _dc.clearClip();
         }
     }
 

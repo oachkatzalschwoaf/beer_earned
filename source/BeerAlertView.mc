@@ -30,7 +30,8 @@ class BeerAlertView extends WatchUi.DataFieldAlert {
         var gw = gh * BeerRenderer.aspect(_scene.shape);
         new BeerPainter(dc, _scene).drawVessel((w - gw) / 2, h * 0.30f, gh, true);
 
+        var label = _scene.text.equals("1") ? Rez.Strings.BeerLabel : Rez.Strings.BeersLabel;
         dc.setColor(_scene.fg, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, h * 0.88f, Graphics.FONT_TINY, WatchUi.loadResource(Rez.Strings.BeersLabel) as String, just);
+        dc.drawText(w / 2, h * 0.88f, Graphics.FONT_TINY, WatchUi.loadResource(label) as String, just);
     }
 }

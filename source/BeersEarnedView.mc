@@ -76,6 +76,11 @@ class BeersEarnedView extends WatchUi.DataField {
         _lapStartCalories = _calories;
     }
 
+    // Each workout step ends its lap. Harmless when onTimerLap() fires as well.
+    function onWorkoutStepComplete() as Void {
+        _lapStartCalories = _calories;
+    }
+
     // The activity was saved or discarded: start over for the next one.
     function onTimerReset() as Void {
         _calories = 0.0f;
