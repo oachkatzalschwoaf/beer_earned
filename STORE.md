@@ -59,14 +59,18 @@ eigener ID und kann im Dashboard gelöscht werden.
 3. Danach öffnet sich der Editor für die App-Details:
    - **Titel, Beschreibung, Neuigkeiten** je Sprache mit den Texten unten
    - **Icon:** `store/store_icon_500.png`
-   - **Screenshots:** `store/screenshots/*.png`
+   - **Screenshots:** höchstens 5, also `store/screenshots/1_…` bis `5_…`
    - **Cover Image & Icons**, optional: Hero-Bild `store/hero_1440x720.png`. Unter **Yes**
      die On-Device-Icons: `store/ondevice_icon_amoled_128.png` für Farbgeräte wie epix und
-     Venu, `store/ondevice_icon_mip_128.png` für 64-Farben-Geräte wie fēnix.
+     Venu, `store/ondevice_icon_mip_128.png` für 64-Farben-Geräte wie fēnix. Das MIP-Icon
+     muss eine indizierte PNG sein. Haben beide Icons dieselbe Größe und Pixeltiefe, lehnt
+     Garmin das zweite ab („existing app icon … pixel size“).
    - **Activity Types:** die Sportarten, zu denen das Feld passt, z. B. Laufen, Radfahren,
      Wandern
    - **Preis:** kostenlos, also nicht als zahlungspflichtig markieren
-4. Absenden. Die App steht dann auf *pending*: Du kannst sie schon selbst laden, öffentlich
+4. Absenden. Neben „Verified" zeigt die Upload-Seite beim ersten Upload eventuell
+   „Signature check failed". Das ist ein bekannter Store-Fehler (CIQQA-4716) und blockiert
+   nicht. Die App steht dann auf *pending*: Du kannst sie schon selbst laden, öffentlich
    ist sie noch nicht. Garmin prüft sie laut SDK-Doku meist innerhalb von 72 Stunden. Das
    Ergebnis kommt per E-Mail, bei Ablehnung mit Begründung.
 
@@ -136,5 +140,5 @@ Die Maße folgen Garmins Brand Guidelines.
 | `store/store_icon_500.png` | Store-Icon 500×500, sRGB, opaker Hintergrund, über 10 px Rand. Quelle: `store/store_icon.svg` |
 | `store/hero_1440x720.png` | Hero- bzw. Cover-Bild 1440×720, ohne Text, gilt also für alle Sprachen |
 | `store/ondevice_icon_amoled_128.png` | On-Device-Store-Icon 128×128 für Farbdisplays |
-| `store/ondevice_icon_mip_128.png` | dasselbe auf die 64-Farben-Palette der MIP-Displays reduziert |
+| `store/ondevice_icon_mip_128.png` | dasselbe auf die 64-Farben-Palette der MIP-Displays reduziert, als indizierte PNG |
 | `store/screenshots/` | Simulator-Screenshots (fēnix 8 47 mm und fēnix 8 Solar 51 mm) |
