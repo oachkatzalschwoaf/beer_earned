@@ -1,0 +1,42 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Beers Earned</string>
+    <string id="BeerLabel">Cerveja</string>
+    <string id="BeersLabel">Cervejas</string>
+    <string id="AlertTitle">Saúde!</string>
+
+    <string id="SettingsCaloriesPerBeer">kcal por cerveja</string>
+    <string id="SettingsBeerStyle">Cerveja</string>
+    <string id="SettingsGlassShape">Copo</string>
+    <string id="SettingsBackground">Fundo</string>
+    <string id="SettingsRounding">Contagem</string>
+    <string id="SettingsStartingBeers">Cervejas no início</string>
+    <string id="SettingsAlertPopup">Pop-up por cerveja</string>
+    <string id="SettingsAlertVibrate">Vibração por cerveja</string>
+    <string id="SettingsAlertTone">Som por cerveja</string>
+
+    <string id="StyleAmber">Âmbar / Lager</string>
+    <string id="StyleRedAle">Vermelha / Red Ale</string>
+    <string id="StyleStout">Stout / Porter</string>
+    <string id="StylePils">Pilsen / Clara</string>
+    <string id="StyleWheat">Trigo / Weizen</string>
+
+    <string id="ShapeMug">Caneca</string>
+    <string id="ShapeWeizen">Copo de trigo</string>
+    <string id="ShapePint">Copo pint</string>
+    <string id="ShapeBottle">Garrafa</string>
+
+    <string id="BgAuto">Automático</string>
+    <string id="BgBlack">Preto</string>
+    <string id="BgWhite">Branco</string>
+
+    <string id="RoundDown">Cervejas inteiras</string>
+    <string id="RoundNearest">Arredondado</string>
+    <string id="RoundUp">Para cima</string>
+    <string id="RoundExact">Uma casa decimal</string>
+
+    <string id="FitChartTitle">Cervejas ganhas</string>
+    <string id="FitBeersLabel">Cervejas</string>
+    <string id="FitTotalLabel">Cervejas ganhas</string>
+    <string id="FitLapLabel">Cervejas</string>
+    <string id="FitUnits">cervejas</string>
+</strings>

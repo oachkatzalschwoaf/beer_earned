@@ -1,0 +1,42 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Beers Earned</string>
+    <string id="BeerLabel">Piwo</string>
+    <string id="BeersLabel">Piwa</string>
+    <string id="AlertTitle">Na zdrowie!</string>
+
+    <string id="SettingsCaloriesPerBeer">kcal na piwo</string>
+    <string id="SettingsBeerStyle">Piwo</string>
+    <string id="SettingsGlassShape">Naczynie</string>
+    <string id="SettingsBackground">Tło</string>
+    <string id="SettingsRounding">Liczenie</string>
+    <string id="SettingsStartingBeers">Piwa na starcie</string>
+    <string id="SettingsAlertPopup">Pop-up co piwo</string>
+    <string id="SettingsAlertVibrate">Wibracja co piwo</string>
+    <string id="SettingsAlertTone">Dźwięk co piwo</string>
+
+    <string id="StyleAmber">Bursztynowe / Lager</string>
+    <string id="StyleRedAle">Czerwone / Red Ale</string>
+    <string id="StyleStout">Stout / Porter</string>
+    <string id="StylePils">Pils / Jasne</string>
+    <string id="StyleWheat">Pszeniczne</string>
+
+    <string id="ShapeMug">Kufel</string>
+    <string id="ShapeWeizen">Szklanka do weizena</string>
+    <string id="ShapePint">Pinta</string>
+    <string id="ShapeBottle">Butelka</string>
+
+    <string id="BgAuto">Automatyczne</string>
+    <string id="BgBlack">Czarne</string>
+    <string id="BgWhite">Białe</string>
+
+    <string id="RoundDown">Całe piwa</string>
+    <string id="RoundNearest">Zaokrąglone</string>
+    <string id="RoundUp">W górę</string>
+    <string id="RoundExact">Jedno miejsce po przecinku</string>
+
+    <string id="FitChartTitle">Zarobione piwa</string>
+    <string id="FitBeersLabel">Piwa</string>
+    <string id="FitTotalLabel">Zarobione piwa</string>
+    <string id="FitLapLabel">Piwa</string>
+    <string id="FitUnits">piwa</string>
+</strings>

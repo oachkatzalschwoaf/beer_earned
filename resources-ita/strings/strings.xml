@@ -1,0 +1,42 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Beers Earned</string>
+    <string id="BeerLabel">Birra</string>
+    <string id="BeersLabel">Birre</string>
+    <string id="AlertTitle">Cin cin!</string>
+
+    <string id="SettingsCaloriesPerBeer">kcal per birra</string>
+    <string id="SettingsBeerStyle">Birra</string>
+    <string id="SettingsGlassShape">Bicchiere</string>
+    <string id="SettingsBackground">Sfondo</string>
+    <string id="SettingsRounding">Conteggio</string>
+    <string id="SettingsStartingBeers">Birre all'inizio</string>
+    <string id="SettingsAlertPopup">Pop-up per birra</string>
+    <string id="SettingsAlertVibrate">Vibrazione per birra</string>
+    <string id="SettingsAlertTone">Tono per birra</string>
+
+    <string id="StyleAmber">Ambrata / Lager</string>
+    <string id="StyleRedAle">Rossa / Red Ale</string>
+    <string id="StyleStout">Stout / Porter</string>
+    <string id="StylePils">Pils / Bionda</string>
+    <string id="StyleWheat">Weizen</string>
+
+    <string id="ShapeMug">Boccale</string>
+    <string id="ShapeWeizen">Bicchiere Weizen</string>
+    <string id="ShapePint">Pinta</string>
+    <string id="ShapeBottle">Bottiglia</string>
+
+    <string id="BgAuto">Automatico</string>
+    <string id="BgBlack">Nero</string>
+    <string id="BgWhite">Bianco</string>
+
+    <string id="RoundDown">Birre intere</string>
+    <string id="RoundNearest">Arrotondato</string>
+    <string id="RoundUp">Per eccesso</string>
+    <string id="RoundExact">Un decimale</string>
+
+    <string id="FitChartTitle">Birre guadagnate</string>
+    <string id="FitBeersLabel">Birre</string>
+    <string id="FitTotalLabel">Birre guadagnate</string>
+    <string id="FitLapLabel">Birre</string>
+    <string id="FitUnits">birre</string>
+</strings>

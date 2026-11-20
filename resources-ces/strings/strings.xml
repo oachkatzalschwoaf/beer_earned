@@ -1,0 +1,42 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Beers Earned</string>
+    <string id="BeerLabel">Pivo</string>
+    <string id="BeersLabel">Piva</string>
+    <string id="AlertTitle">Na zdraví!</string>
+
+    <string id="SettingsCaloriesPerBeer">kcal na pivo</string>
+    <string id="SettingsBeerStyle">Pivo</string>
+    <string id="SettingsGlassShape">Sklenice</string>
+    <string id="SettingsBackground">Pozadí</string>
+    <string id="SettingsRounding">Počítání</string>
+    <string id="SettingsStartingBeers">Piva na začátku</string>
+    <string id="SettingsAlertPopup">Pop-up za pivo</string>
+    <string id="SettingsAlertVibrate">Vibrace za pivo</string>
+    <string id="SettingsAlertTone">Tón za pivo</string>
+
+    <string id="StyleAmber">Polotmavé / Amber</string>
+    <string id="StyleRedAle">Červené / Red Ale</string>
+    <string id="StyleStout">Stout / Porter</string>
+    <string id="StylePils">Světlý ležák</string>
+    <string id="StyleWheat">Pšeničné / Weizen</string>
+
+    <string id="ShapeMug">Korbel</string>
+    <string id="ShapeWeizen">Sklenice na weizen</string>
+    <string id="ShapePint">Pinta</string>
+    <string id="ShapeBottle">Láhev</string>
+
+    <string id="BgAuto">Automaticky</string>
+    <string id="BgBlack">Černé</string>
+    <string id="BgWhite">Bílé</string>
+
+    <string id="RoundDown">Celá piva</string>
+    <string id="RoundNearest">Zaokrouhleno</string>
+    <string id="RoundUp">Nahoru</string>
+    <string id="RoundExact">Jedno desetinné místo</string>
+
+    <string id="FitChartTitle">Vydělaná piva</string>
+    <string id="FitBeersLabel">Piva</string>
+    <string id="FitTotalLabel">Vydělaná piva</string>
+    <string id="FitLapLabel">Piva</string>
+    <string id="FitUnits">piva</string>
+</strings>

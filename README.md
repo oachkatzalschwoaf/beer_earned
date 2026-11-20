@@ -25,7 +25,7 @@ It's an independent re-implementation: no original code or artwork is used.
 - **Garmin Connect**: a "Beers Earned" chart, the total in the activity summary, and beers
   per lap in the laps table.
 - **Settings** in the Connect IQ / Garmin Connect app or right on the watch.
-- English and German.
+- English, German, French, Spanish, Italian, Dutch, Czech, Polish and Portuguese.
 
 ## Settings
 
@@ -60,10 +60,11 @@ show them.
 
 ## Supported devices
 
-There are 92 products in [manifest.xml](manifest.xml), including fēnix 5 Plus, 6 Pro, 7, 8 and E,
-epix (Gen 2), Enduro 3, Forerunner 165, 245 Music, 255, 265, 570, 645 Music, 745, 945, 955,
-965 and 970, Venu 2, 3, 4, X1 and Sq 2, vívoactive 5 and 6, MARQ, Instinct 3 AMOLED and
-Crossover AMOLED, Descent, D2 and Approach, and Edge 530 through 1050.
+There are 114 products in [manifest.xml](manifest.xml), including fēnix 5 Plus, 6 Pro, 7, 8, 9 and
+E, epix (Gen 2), Enduro 3 and 4, Forerunner 70, 165, 170, 245 Music, 255, 265, 570, 645 Music, 745,
+945, 955, 965 and 970, Venu 2, 3, 4, X1 and Sq 2, vívoactive 5 and 6, MARQ (Gen 1 to 3), Instinct 3
+AMOLED and Crossover AMOLED, Descent, D2 and Approach, Edge 530 through 1060 and Explore 2 and 3,
+and the GPSMAP 67 / H1, Montana 7 and eTrex Touch handhelds.
 
 These are left out on purpose:
 
@@ -102,5 +103,5 @@ the VS Code *Monkey C* extension and a developer key.
 | `source/BeerAlertView.mc` | "Cheers!" pop-up |
 | `source/BeerMath.mc` | Rounding and fill-level maths |
 | `tests/` | Unit tests |
-| `resources/` | Strings, settings, FIT labels, launcher icon (`resources-deu/` for German) |
+| `resources/` | Strings, settings, FIT labels, launcher icon (`resources-<lang>/` for the translations) |
 | `store/` | Store icon and screenshots |

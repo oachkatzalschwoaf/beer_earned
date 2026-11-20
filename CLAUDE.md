@@ -9,25 +9,39 @@ earned", draws a vessel filling toward the next beer, pops up "Cheers!" for each
 records the count as FIT developer fields that Garmin Connect charts. It's a free continuation of
 the discontinued store app *Beers Earned Plus* by brewer_midwest (store id
 `cb51f0b9-6836-4856-a4f0-4c18e61cf08c`). That app's source was never shared, so nothing here derives
-from it. The goal is a free release in the Connect IQ store; see `STORE.md`.
+from it. It's published free in the Connect IQ store (listing
+`1bf68dd1-f096-4186-8b7d-24ba8c07c7cf`, live since 1.0.0 on 2026-10-15; the listing id is not the
+manifest app id). Every release is an update of that app, so the app id, the signing key and the
+FIT field ids must never change. See `STORE.md` for the upload steps.
 
-`manifest.xml` targets 92 products (colour watches and Edge units with ≥ 64 KB for data
-fields), `minApiLevel` 3.2.0. The priority device is the fēnix 8X MIP/solar = `fenix8solar51mm`.
+`manifest.xml` targets 114 products (colour watches, Edge units and outdoor handhelds with ≥ 64 KB
+for data fields), `minApiLevel` 3.2.0. The priority device is the fēnix 8X MIP/solar = `fenix8solar51mm`.
 32 KB devices are excluded on purpose: the field uses about 24 of their 28 KB.
 
 ## Build / run / test
 
 Tooling is the Connect IQ SDK plus the VS Code Monkey C extension; there's no npm or make. The SDK
-`bin/` is at `%APPDATA%\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-<version>\bin`. The developer key lives
-outside the repo at `W:\Code\coding\ConnectIQDevKEy\developer_key`. Never commit it.
+`bin/` is at `%APPDATA%\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-<version>\bin`. Several SDKs can
+be installed side by side. `%APPDATA%\Garmin\ConnectIQ\current-sdk.cfg` names the active one,
+currently 9.3.0. The developer key lives outside the repo at
+`W:\Code\coding\ConnectIQDevKEy\developer_key`. Never commit it.
+
+```sh
+SDK=$(ls -d /c/Users/$USERNAME/AppData/Roaming/Garmin/ConnectIQ/Sdks/connectiq-sdk-win-9.3*/bin | tail -1)
+KEY="W:/Code/coding/ConnectIQDevKEy/developer_key"
+```
 
 - **One device (Git Bash):**
   `"$SDK/monkeyc.bat" -f monkey.jungle -d fenix8solar51mm -o build/out.prg -y "$KEY" -w -l 3`
   `-l 3` is the strict type check. The code is clean at that level, so keep it that way.
 - **All devices / store package:**
   `"$SDK/monkeyc.bat" -e -r -f monkey.jungle -o bin/BeersEarned.iq -y "$KEY" -w -l 3`
-  This runs 143 builds in about 6 minutes. That's far faster than a loop of `-d` builds, which pay
-  JVM start-up each time. The only warnings are launcher-icon scaling, which is harmless for an SVG.
+  This runs 168 builds in about 2.5 minutes with SDK 9.3. That's far faster than a loop of `-d`
+  builds, which pay JVM start-up each time. The only warnings are launcher-icon scaling, which is
+  harmless for an SVG.
+  The `.iq` is a 7z archive. To check what you're about to upload, run
+  `7z e -so bin/BeersEarned.iq manifest.xml`. The app id appears without dashes; it must be
+  `f1c3eaf0…`, not the beta id. The output also lists the part numbers and languages.
 - **Unit tests:** add `--unit-test` to a single-device build, start the simulator
   (`connectiq.bat`), then run `MSYS_NO_PATHCONV=1 "$SDK/monkeydo.bat" build/test.prg fenix8solar51mm /t`.
   Without `MSYS_NO_PATHCONV`, Git Bash rewrites `/t` into a path.
@@ -41,6 +55,15 @@ outside the repo at `W:\Code\coding\ConnectIQDevKEy\developer_key`. Never commit
 
 `bin/` and `build/` are generated output and git-ignored (so is anything key-like, see
 `.gitignore`). The store upload `bin/BeersEarned.iq` therefore never lands in the repo.
+
+**Adding devices.** SDK Manager downloads the device definitions to
+`%APPDATA%\Garmin\ConnectIQ\Devices\<id>\compiler.json`. A device is eligible when all of these hold:
+- the `appTypes` entry for `datafield` has a `memoryLimit` of at least 65536
+- the highest `partNumbers[].connectIQVersion` is at least 3.2.0
+- `bitsPerPixel` is greater than 1
+
+Diff the eligible ids against `<iq:products>`, keep the list sorted, and update the counts here
+and in `README.md`.
 
 ## Architecture
 
@@ -96,7 +119,11 @@ Each setting lives in four places that must stay in sync:
 - `BeerSettings.mc`: the key constant plus `Config.load()` with validation.
 - `BeerSettingsMenu.mc`: the on-device item.
 
-It also needs `@Strings` labels in `resources/strings/strings.xml` and `resources-deu/strings/strings.xml`.
+It also needs `@Strings` labels in `resources/strings/strings.xml` and in every translation,
+`resources-<lang>/strings/strings.xml` (deu, fre, spa, ita, dut, ces, pol, por). A new language
+also goes into the manifest's `<iq:languages>`. The alert only knows singular and plural
+(`BeerLabel` for exactly 1, otherwise `BeersLabel`). Czech and Polish therefore use their 2–4
+form ("Piva", "Piwa") as the plural. Translated store texts live in `STORE.md`.
 List values are numbered in display order, light to dark with "automatic" first, because the
 on-device menu cycles in value order.
 
@@ -113,7 +140,7 @@ on-device menu cycles in value order.
 ## Other docs
 
 - `README.md`: features, settings and the device list, for users and contributors.
-- `STORE.md`: the publishing steps and the EN/DE listing texts.
+- `STORE.md`: the publishing and update steps, plus the listing texts in all nine languages.
 - `SIDELOAD.md`: USB install.
 - `store/`: the store icon and screenshots.
 - `requirements.md`: an old wish list. Still not built from it: daily totals, streaks and a can
