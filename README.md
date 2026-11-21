@@ -4,6 +4,8 @@ A free Garmin Connect IQ data field that turns the calories you burn into beers.
 A glass fills up as you go, every whole beer gets a "Cheers!" pop-up, and the count is
 saved with the activity so Garmin Connect can chart it.
 
+**[Get it free in the Connect IQ Store](https://apps.garmin.com/apps/1bf68dd1-f096-4186-8b7d-24ba8c07c7cf)**
+
 It continues the idea of the discontinued store app *Beers Earned Plus* by brewer_midwest.
 It's an independent re-implementation: no original code or artwork is used.
 
