@@ -6,8 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A Garmin Connect IQ **DataField** in Monkey C. It converts the activity's calories into "beers
 earned", draws a vessel filling toward the next beer, pops up "Cheers!" for each whole beer, and
-records the count as FIT developer fields that Garmin Connect charts. It's a free continuation of
-the discontinued store app *Beers Earned Plus* by brewer_midwest (store id
+records the count as FIT developer fields that Garmin Connect charts. Since 1.2.0 the drink can
+also be a soft drink; the code still says "beer" for the count. It's a free continuation of the
+discontinued store app *Beers Earned Plus* by brewer_midwest (store id
 `cb51f0b9-6836-4856-a4f0-4c18e61cf08c`). That app's source was never shared, so nothing here derives
 from it. It's published free in the Connect IQ store (listing
 `1bf68dd1-f096-4186-8b7d-24ba8c07c7cf`, live since 1.0.0 on 2026-10-15; the listing id is not the
@@ -70,7 +71,7 @@ and in `README.md`.
 - `BeersEarnedApp.mc`: entry point. `getSettingsView()` returns the on-device menu, and
   `onSettingsChanged()` forwards to `view.reloadSettings()`.
 - `BeersEarnedView.mc` (`DataField`): `compute()` runs once a second and does
-  `raw = startingBeers + calories / caloriesPerBeer`. It writes three FIT fields and detects
+  `raw = calories / caloriesPerBeer`. It writes three FIT fields and detects
   whole-beer crossings in `_checkMilestone()`. The first sample only sets the baseline, and a
   settings change re-baselines. Those crossings call `_celebrate()`: a `DataFieldAlert` pop-up,
   vibration and tone.
@@ -85,11 +86,14 @@ and in `README.md`.
     wide slots, and the count alone for tiny slots. On round screens the view turns
     `getObscurityFlags()` into the slot's position, and the painter shrinks and slides content
     until it fits inside the bezel circle.
-  - The mug is a rounded rectangle plus a handle ellipse. The other glasses are half-width profiles
-    filled with `fillPolygon`.
-- `BeerSettings.mc`: property keys, enum values, a validated `Config` snapshot and `nextPreset()`.
-- `BeerSettingsMenu.mc`: the on-device `Menu2`. Selecting an item cycles to its next value.
-  `choiceLabels()` maps list values to their string ids.
+  - The mug is a rounded rectangle plus a handle ellipse. The other glasses and bottles are
+    half-width profiles filled with `fillPolygon`. Cola gets a red band and Spezi a label of
+    coloured waves, drawn over the contents.
+- `BeerSettings.mc`: property keys, enum values, the per-drink tables, `sync()` and a validated
+  `Config` snapshot.
+- `BeerSettingsMenu.mc`: the on-device `Menu2` and the drink list it pushes. Background and
+  counting cycle on selection. `choiceLabels()` maps list values to their string ids.
+- `BeerKeypad.mc`: the number pad for the calories, for touch screens and button devices.
 - `BeerAlertView.mc`: the "Cheers!" `DataFieldAlert`.
 - `BeerMath.mc`: rounding, count text and fill level. These are pure functions and unit-tested.
 - `tests/BeersEarnedTests.mc`: `(:test)` functions plus two helper classes.
@@ -119,29 +123,43 @@ Each setting lives in four places that must stay in sync:
 - `BeerSettings.mc`: the key constant plus `Config.load()` with validation.
 - `BeerSettingsMenu.mc`: the on-device item.
 
+A drink additionally needs an entry in `DRINK_SHAPES`, `DRINK_CALORIES`, `BEER_COLORS`,
+`HIGHLIGHT_COLORS`, `choiceLabels()` and `settings.xml` (`testDrinkTables` checks the sizes).
+
 It also needs `@Strings` labels in `resources/strings/strings.xml` and in every translation,
 `resources-<lang>/strings/strings.xml` (deu, fre, spa, ita, dut, ces, pol, por). A new language
 also goes into the manifest's `<iq:languages>`. The alert only knows singular and plural
-(`BeerLabel` for exactly 1, otherwise `BeersLabel`). Czech and Polish therefore use their 2–4
-form ("Piva", "Piwa") as the plural. Translated store texts live in `STORE.md`.
-List values are numbered in display order, light to dark with "automatic" first, because the
-on-device menu cycles in value order.
+(`BeerLabel` for exactly 1, otherwise `BeersLabel`; `SodaLabel` / `SodasLabel` for soft drinks).
+Czech and Polish therefore use their 2–4 form ("Piva", "Piwa") as the plural. Translated
+store texts live in `STORE.md`. List values are numbered in display order (beers before soft
+drinks, "automatic" first), because the on-device menus show or cycle them in value order.
+Once released, never renumber them.
 
 | Key | Type | Values (default) |
 |---|---|---|
-| `caloriesPerBeer` | float | 10–5000 (150) |
-| `beerStyle` | number | 0 Pils, 1 Hefeweizen, 2 Amber (2), 3 Red Ale, 4 Stout |
-| `glassShape` | number | 0 Mug (0), 1 Weizen, 2 Pint, 3 Bottle |
+| `drink` | number | 0 Mug (0), 1 Pils, 2 Wheat, 3 Bottle, 4 Stout, 5 Cola, 6 Spezi, 7 Herbal soda |
+| `caloriesPerBeer` | float | 10–5000 (150); "kcal per drink" in the UI |
 | `background` | number | 0 Auto (0), 1 Black, 2 White |
-| `roundingMode` | number | 0 Down (0), 1 Nearest, 2 Up, 3 One decimal |
-| `startingBeers` | float | 0–1000 (0) |
+| `roundingMode` | number | 0 Down, 1 Nearest, 2 Up, 3 One decimal (3) |
 | `alertPopup` / `alertVibrate` / `alertTone` | boolean | true / false / false |
+| `beerStyle`, `glassShape` | number | pre-1.2.0, not settable; `upgradedDrink()` reads them once |
+
+`BeerSettings.sync()` ties the calories to the drink: when the drink changes and the calories
+don't, it writes the new drink's default to `caloriesPerBeer`. It remembers both in
+`Application.Storage` (`seenDrink`, `seenCalories`). Its first run migrates from 1.1. Call it
+before `Config.load()` wherever the drink may have changed. It isn't inside `load()` because of
+the tiny call stack.
+
+**Brands.** No logos, brand lettering or copied label artwork. "Spezi" (a registered trademark)
+is the one brand name in the app and the store texts, chosen by the author. Cola and Spezi
+only hint at the originals.
 
 ## Other docs
 
 - `README.md`: features, settings and the device list, for users and contributors.
 - `STORE.md`: the publishing and update steps, plus the listing texts in all nine languages.
 - `SIDELOAD.md`: USB install.
-- `store/`: the store icon and screenshots.
+- `store/`: the store icon and screenshots. Screenshots are simulator captures of the display
+  (454×454, round, from a scratch app that calls `BeerPainter`).
 - `requirements.md`: an old wish list. Still not built from it: daily totals, streaks and a can
   shape. Its file names don't match the code.

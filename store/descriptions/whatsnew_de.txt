@@ -1,0 +1,1 @@
+Bier und Glas sind jetzt eine Einstellung „Getränk“, neu sind Cola, Spezi und Kräuterlimo. Jedes Getränk bringt seine Kalorien mit; eigene Werte gibst du über das neue Tastenfeld ein. Gezählt wird standardmäßig mit einer Nachkommastelle, und jede Aktivität startet bei null.

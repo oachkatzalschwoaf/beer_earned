@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Bier</string>
     <string id="BeersLabel">Biere</string>
+    <string id="SodaLabel">Limo</string>
+    <string id="SodasLabel">Limos</string>
     <string id="AlertTitle">Prost!</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal pro Bier</string>
-    <string id="SettingsBeerStyle">Bier</string>
-    <string id="SettingsGlassShape">Glas</string>
+    <string id="SettingsCaloriesPerBeer">kcal pro Getränk</string>
+    <string id="SettingsDrink">Getränk</string>
     <string id="SettingsBackground">Hintergrund</string>
     <string id="SettingsRounding">Zählweise</string>
-    <string id="SettingsStartingBeers">Biere zu Beginn</string>
-    <string id="SettingsAlertPopup">Pop-up pro Bier</string>
-    <string id="SettingsAlertVibrate">Vibration pro Bier</string>
-    <string id="SettingsAlertTone">Ton pro Bier</string>
+    <string id="SettingsAlertPopup">Pop-up pro Getränk</string>
+    <string id="SettingsAlertVibrate">Vibration pro Getränk</string>
+    <string id="SettingsAlertTone">Ton pro Getränk</string>
 
-    <string id="StyleAmber">Märzen / Amber</string>
-    <string id="StyleRedAle">Rotbier / Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Pils / Helles</string>
-    <string id="StyleWheat">Hefeweizen</string>
-
-    <string id="ShapeMug">Bierkrug</string>
-    <string id="ShapeWeizen">Weißbierglas</string>
-    <string id="ShapePint">Pintglas</string>
-    <string id="ShapeBottle">Flasche</string>
+    <string id="DrinkMug">Krug (150 kcal)</string>
+    <string id="DrinkPils">Pils (140 kcal)</string>
+    <string id="DrinkWheat">Weizen (150 kcal)</string>
+    <string id="DrinkBottle">Flasche (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Kräuterlimo (109 kcal)</string>
 
     <string id="BgAuto">Automatisch</string>
     <string id="BgBlack">Schwarz</string>
     <string id="BgWhite">Weiß</string>
 
-    <string id="RoundDown">Ganze Biere</string>
+    <string id="RoundDown">Ganze Getränke</string>
     <string id="RoundNearest">Gerundet</string>
     <string id="RoundUp">Aufgerundet</string>
     <string id="RoundExact">Eine Nachkommastelle</string>

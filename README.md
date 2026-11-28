@@ -13,17 +13,16 @@ It's an independent re-implementation: no original code or artwork is used.
 
 ## Features
 
-- **Live count**: kcal burned ÷ kcal per beer (default 150, roughly a 0.33 l lager), plus
-  optional beers at start.
-- **Animated glass**: a mug, wheat-beer glass, pint glass or bottle fills toward the next
-  beer, with a head of foam and rising bubbles.
-- **Five beers**: Pilsner / Helles, Hefeweizen, Amber / Lager, Red Ale, Stout / Porter.
+- **Live count**: kcal burned ÷ kcal per drink. Every activity starts at zero.
+- **Eight drinks**: mug, Pilsner, wheat beer, bottled beer, stout, cola, Spezi (cola mix)
+  and herbal soda. Each has its own vessel and default calories, which you can overwrite.
+- **Animated vessel**: it fills toward the next drink, with foam or fizz and rising bubbles.
 - **Every data-screen layout**: 1 to 8 fields, round and rectangular screens. On round
   screens the drawing stays clear of the bezel. Wide slots show a small glass next to the
   number, tiny slots just the number.
 - **Background**: automatic (follows the activity's dark or light setting), black or white.
-- **An alert for each beer**: pop-up (on by default), vibration and tone (off by default).
-- **Counting**: whole beers (default), rounded, rounded up, or one decimal.
+- **An alert for each drink**: pop-up (on by default), vibration and tone (off by default).
+- **Counting**: one decimal (default), whole drinks, rounded, or rounded up.
 - **Garmin Connect**: a "Beers Earned" chart, the total in the activity summary, and beers
   per lap in the laps table.
 - **Settings** in the Connect IQ / Garmin Connect app or right on the watch.
@@ -33,18 +32,36 @@ It's an independent re-implementation: no original code or artwork is used.
 
 | Setting | Options | Default |
 |---|---|---|
-| kcal per beer | 10–5000 (watch menu: 100–300) | 150 |
-| Beer | Pilsner / Helles, Hefeweizen, Amber / Lager, Red Ale, Stout / Porter | Amber / Lager |
-| Glass | Mug, Wheat beer glass, Pint glass, Bottle | Mug |
+| Drink | see below | Mug |
+| kcal per drink | 10–5000 | the drink's default |
 | Background | Automatic, Black, White | Automatic |
-| Counting | Whole beers, Rounded, Rounded up, One decimal | Whole beers |
-| Beers at start | 0–1000 (watch menu: 0–10) | 0 |
-| Pop-up per beer | on / off | on |
-| Vibrate per beer | on / off | off |
-| Tone per beer | on / off | off |
+| Counting | Whole drinks, Rounded, Rounded up, One decimal | One decimal |
+| Pop-up per drink | on / off | on |
+| Vibrate per drink | on / off | off |
+| Tone per drink | on / off | off |
+
+Choosing another drink sets *kcal per drink* to that drink's default (per 0.33 l):
+
+| Drink | Vessel | kcal |
+|---|---|---|
+| Mug | handled mug | 150 |
+| Pilsner | pint glass | 140 |
+| Wheat beer | wheat-beer glass | 150 |
+| Bottle | beer bottle | 140 |
+| Stout | pint glass | 150 |
+| Cola | cola bottle | 139 |
+| Spezi | labelled bottle | 132 |
+| Herbal soda | bottle | 109 |
+
+The field still calls its count "beers" in Garmin Connect, whatever the drink.
 
 On the watch, the same settings live in the activity's settings, under this data field. The
-exact menu path depends on the model. Selecting an item moves it to its next value.
+exact menu path depends on the model. *Drink* opens a list and *kcal per drink* a number pad:
+tap the keys, or move with up / down and press select. Selecting any other item moves it to
+its next value.
+
+Updating from 1.1 or older keeps your calories and counting mode, and picks the drink closest
+to your former beer and glass.
 
 ## Garmin Connect
 
@@ -65,8 +82,8 @@ show them.
 There are 114 products in [manifest.xml](manifest.xml), including fēnix 5 Plus, 6 Pro, 7, 8, 9 and
 E, epix (Gen 2), Enduro 3 and 4, Forerunner 70, 165, 170, 245 Music, 255, 265, 570, 645 Music, 745,
 945, 955, 965 and 970, Venu 2, 3, 4, X1 and Sq 2, vívoactive 5 and 6, MARQ (Gen 1 to 3), Instinct 3
-AMOLED and Crossover AMOLED, Descent, D2 and Approach, Edge 530 through 1060 and Explore 2 and 3,
-and the GPSMAP 67 / H1, Montana 7 and eTrex Touch handhelds.
+AMOLED and Crossover AMOLED, Descent, D2 and Approach, Edge 530 through 1060, MTB and Explore 2
+and 3, and the GPSMAP 67 / H1, Montana 7 and eTrex Touch handhelds.
 
 These are left out on purpose:
 
@@ -76,7 +93,7 @@ These are left out on purpose:
 
 ## Building
 
-You need the [Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) (built with 9.1),
+You need the [Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) (built with 9.3),
 the VS Code *Monkey C* extension and a developer key.
 
 - **Run in the simulator:** open the folder in VS Code, then *Run > Run Without Debugging*.
@@ -101,7 +118,8 @@ the VS Code *Monkey C* extension and a developer key.
 | `source/BeersEarnedView.mc` | The data field: calories to beers, alerts, FIT fields |
 | `source/BeerRenderer.mc` | Drawing: glasses, foam, bubbles, layout per slot size |
 | `source/BeerSettings.mc` | Setting keys, values and validated loading |
-| `source/BeerSettingsMenu.mc` | On-device settings menu |
+| `source/BeerSettingsMenu.mc` | On-device settings menu and drink list |
+| `source/BeerKeypad.mc` | Number pad for the calories |
 | `source/BeerAlertView.mc` | "Cheers!" pop-up |
 | `source/BeerMath.mc` | Rounding and fill-level maths |
 | `tests/` | Unit tests |

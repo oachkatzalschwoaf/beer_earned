@@ -1,0 +1,13 @@
+Turn your workout into beers! Beers Earned converts the calories you burn into beers and shows a glass filling up toward your next one, with foam and rising bubbles. Every whole beer earned gets a "Cheers!" pop-up.
+
+• Eight drinks, each with its own look: mug, Pilsner, wheat beer, bottled beer, stout, cola, Spezi or herbal soda
+• Fits any data screen layout, from 1 to 8 fields, on round and rectangular screens
+• Automatic, black or white background
+• Optional vibration and tone for each beer
+• Calories per drink preset for each one and adjustable on a number pad
+• Count with one decimal, in whole drinks or rounded
+• Saved with your activity: Garmin Connect shows a beers chart, the total in the summary, and beers per lap
+• Settings in the Connect IQ app or right on the watch
+
+A free continuation of the idea behind the discontinued "Beers Earned Plus".
+Just for fun: calorie values are estimates. Please drink responsibly.

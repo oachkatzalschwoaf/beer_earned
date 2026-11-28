@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Beer</string>
     <string id="BeersLabel">Beers</string>
+    <string id="SodaLabel">Soda</string>
+    <string id="SodasLabel">Sodas</string>
     <string id="AlertTitle">Cheers!</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal per beer</string>
-    <string id="SettingsBeerStyle">Beer</string>
-    <string id="SettingsGlassShape">Glass</string>
+    <string id="SettingsCaloriesPerBeer">kcal per drink</string>
+    <string id="SettingsDrink">Drink</string>
     <string id="SettingsBackground">Background</string>
     <string id="SettingsRounding">Counting</string>
-    <string id="SettingsStartingBeers">Beers at start</string>
-    <string id="SettingsAlertPopup">Pop-up per beer</string>
-    <string id="SettingsAlertVibrate">Vibrate per beer</string>
-    <string id="SettingsAlertTone">Tone per beer</string>
+    <string id="SettingsAlertPopup">Pop-up per drink</string>
+    <string id="SettingsAlertVibrate">Vibrate per drink</string>
+    <string id="SettingsAlertTone">Tone per drink</string>
 
-    <string id="StyleAmber">Amber / Lager</string>
-    <string id="StyleRedAle">Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Pilsner / Helles</string>
-    <string id="StyleWheat">Hefeweizen</string>
-
-    <string id="ShapeMug">Mug</string>
-    <string id="ShapeWeizen">Wheat beer glass</string>
-    <string id="ShapePint">Pint glass</string>
-    <string id="ShapeBottle">Bottle</string>
+    <string id="DrinkMug">Mug (150 kcal)</string>
+    <string id="DrinkPils">Pilsner (140 kcal)</string>
+    <string id="DrinkWheat">Wheat beer (150 kcal)</string>
+    <string id="DrinkBottle">Bottle (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Herbal soda (109 kcal)</string>
 
     <string id="BgAuto">Automatic</string>
     <string id="BgBlack">Black</string>
     <string id="BgWhite">White</string>
 
-    <string id="RoundDown">Whole beers</string>
+    <string id="RoundDown">Whole drinks</string>
     <string id="RoundNearest">Rounded</string>
     <string id="RoundUp">Rounded up</string>
     <string id="RoundExact">One decimal</string>

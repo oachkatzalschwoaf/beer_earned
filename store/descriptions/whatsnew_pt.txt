@@ -1,0 +1,1 @@
+Cerveja e copo agora são um só ajuste "Bebida", com cola, Spezi e refrigerante de ervas como novidades. Cada bebida traz suas calorias; digite as suas no novo teclado numérico. O padrão é uma casa decimal, e cada atividade começa do zero.

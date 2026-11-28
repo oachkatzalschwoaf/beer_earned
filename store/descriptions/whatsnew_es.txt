@@ -1,0 +1,1 @@
+Cerveza y vaso son ahora un solo ajuste «Bebida», con cola, Spezi y refresco de hierbas como novedades. Cada bebida trae sus calorías; escribe las tuyas en el nuevo teclado numérico. Por defecto un decimal, y cada actividad empieza en cero.

@@ -1,0 +1,13 @@
+Zamień trening na piwo! Beers Earned przelicza spalone kalorie na piwa i pokazuje szklankę, która napełnia się do następnego piwa, z pianą i unoszącymi się bąbelkami. Za każde pełne zarobione piwo pojawia się okienko „Na zdrowie!”.
+
+• Osiem napojów, każdy z własnym wyglądem: kufel, pils, pszeniczne, piwo butelkowe, stout, cola, Spezi lub napój ziołowy
+• Pasuje do każdego układu ekranu danych, od 1 do 8 pól, na okrągłych i prostokątnych ekranach
+• Tło automatyczne, czarne lub białe
+• Opcjonalnie wibracja i dźwięk przy każdym piwie
+• Kalorie ustawione dla każdego napoju, do zmiany na klawiaturze numerycznej
+• Liczenie z jednym miejscem po przecinku, w całych napojach lub z zaokrągleniem
+• Zapisywane z aktywnością: Garmin Connect pokazuje wykres piw, sumę w podsumowaniu i piwa na okrążenie
+• Ustawienia w aplikacji Connect IQ lub bezpośrednio na zegarku
+
+Darmowa kontynuacja pomysłu wycofanej aplikacji „Beers Earned Plus”.
+Tylko dla zabawy: wartości kalorii są szacunkowe. Pij odpowiedzialnie.

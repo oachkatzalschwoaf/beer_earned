@@ -1,0 +1,1 @@
+Beer and glass are now one "Drink" setting, and cola, Spezi and herbal soda are new. Each drink brings its calories; type your own on the new number pad. The count shows one decimal by default and every activity starts at zero.

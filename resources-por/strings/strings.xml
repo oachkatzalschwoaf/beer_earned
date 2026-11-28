@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Cerveja</string>
     <string id="BeersLabel">Cervejas</string>
+    <string id="SodaLabel">Refrigerante</string>
+    <string id="SodasLabel">Refrigerantes</string>
     <string id="AlertTitle">Saúde!</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal por cerveja</string>
-    <string id="SettingsBeerStyle">Cerveja</string>
-    <string id="SettingsGlassShape">Copo</string>
+    <string id="SettingsCaloriesPerBeer">kcal por bebida</string>
+    <string id="SettingsDrink">Bebida</string>
     <string id="SettingsBackground">Fundo</string>
     <string id="SettingsRounding">Contagem</string>
-    <string id="SettingsStartingBeers">Cervejas no início</string>
-    <string id="SettingsAlertPopup">Pop-up por cerveja</string>
-    <string id="SettingsAlertVibrate">Vibração por cerveja</string>
-    <string id="SettingsAlertTone">Som por cerveja</string>
+    <string id="SettingsAlertPopup">Aviso por bebida</string>
+    <string id="SettingsAlertVibrate">Vibração por bebida</string>
+    <string id="SettingsAlertTone">Som por bebida</string>
 
-    <string id="StyleAmber">Âmbar / Lager</string>
-    <string id="StyleRedAle">Vermelha / Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Pilsen / Clara</string>
-    <string id="StyleWheat">Trigo / Weizen</string>
-
-    <string id="ShapeMug">Caneca</string>
-    <string id="ShapeWeizen">Copo de trigo</string>
-    <string id="ShapePint">Copo pint</string>
-    <string id="ShapeBottle">Garrafa</string>
+    <string id="DrinkMug">Caneca (150 kcal)</string>
+    <string id="DrinkPils">Pilsen (140 kcal)</string>
+    <string id="DrinkWheat">Trigo (150 kcal)</string>
+    <string id="DrinkBottle">Garrafa (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Ervas (109 kcal)</string>
 
     <string id="BgAuto">Automático</string>
     <string id="BgBlack">Preto</string>
     <string id="BgWhite">Branco</string>
 
-    <string id="RoundDown">Cervejas inteiras</string>
+    <string id="RoundDown">Bebidas inteiras</string>
     <string id="RoundNearest">Arredondado</string>
     <string id="RoundUp">Para cima</string>
     <string id="RoundExact">Uma casa decimal</string>

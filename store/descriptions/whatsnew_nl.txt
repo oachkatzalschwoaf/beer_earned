@@ -1,0 +1,1 @@
+Bier en glas zijn nu één instelling "Drank", nieuw zijn cola, Spezi en kruidenfris. Elk drankje heeft zijn eigen calorieën; voer eigen waarden in met het nieuwe cijferblok. Standaard één decimaal, en elke activiteit begint bij nul.

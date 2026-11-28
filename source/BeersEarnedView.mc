@@ -23,7 +23,7 @@ class BeersEarnedView extends WatchUi.DataField {
 
     private var _calories as Float = 0.0f;         // kcal burned so far in this activity
     private var _lapStartCalories as Float = 0.0f;
-    private var _rawBeers as Float = 0.0f;         // unrounded count incl. the starting offset
+    private var _rawBeers as Float = 0.0f;         // unrounded count
     private var _lastWhole as Number = -1;         // whole beers at the last check; -1 = no baseline yet
     private var _tick as Number = 0;               // advances the bubble animation
 
@@ -33,8 +33,8 @@ class BeersEarnedView extends WatchUi.DataField {
 
     function initialize() {
         DataField.initialize();
+        BeerSettings.sync();
         _cfg = new BeerSettings.Config();
-        _rawBeers = _cfg.startingBeers;
         _createFitFields();
     }
 
@@ -55,7 +55,7 @@ class BeersEarnedView extends WatchUi.DataField {
         if (cal != null) {
             _calories = cal.toFloat();
         }
-        _rawBeers = _cfg.startingBeers + _calories / _cfg.caloriesPerBeer;
+        _rawBeers = _calories / _cfg.caloriesPerBeer;
         if (cal != null) {
             _checkMilestone();
         }
@@ -85,7 +85,7 @@ class BeersEarnedView extends WatchUi.DataField {
     function onTimerReset() as Void {
         _calories = 0.0f;
         _lapStartCalories = 0.0f;
-        _rawBeers = _cfg.startingBeers;
+        _rawBeers = 0.0f;
         _lastWhole = -1;
     }
 
@@ -124,12 +124,12 @@ class BeersEarnedView extends WatchUi.DataField {
     //! Re-read the settings after they changed on the phone or on the watch.
     function reloadSettings() as Void {
         var oldCalories = _cfg.caloriesPerBeer;
-        var oldStart = _cfg.startingBeers;
+        BeerSettings.sync();
         _cfg.load();
-        if (oldCalories != _cfg.caloriesPerBeer || oldStart != _cfg.startingBeers) {
+        if (oldCalories != _cfg.caloriesPerBeer) {
             _lastWhole = -1; // re-baseline so the jump in the count doesn't fire alerts
         }
-        _rawBeers = _cfg.startingBeers + _calories / _cfg.caloriesPerBeer;
+        _rawBeers = _calories / _cfg.caloriesPerBeer;
         WatchUi.requestUpdate();
     }
 
@@ -149,8 +149,8 @@ class BeersEarnedView extends WatchUi.DataField {
         var s = new BeerScene();
         s.text = BeerMath.countText(_rawBeers, _cfg.rounding);
         s.frac = BeerMath.fillFraction(_rawBeers);
-        s.style = _cfg.style;
-        s.shape = _cfg.shape;
+        s.drink = _cfg.drink;
+        s.shape = BeerSettings.DRINK_SHAPES[_cfg.drink];
         var bg = Graphics.COLOR_BLACK;
         if (_cfg.background == BeerSettings.BG_WHITE) {
             bg = Graphics.COLOR_WHITE;

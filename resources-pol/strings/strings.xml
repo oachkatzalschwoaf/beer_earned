@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Piwo</string>
     <string id="BeersLabel">Piwa</string>
+    <string id="SodaLabel">Napój</string>
+    <string id="SodasLabel">Napoje</string>
     <string id="AlertTitle">Na zdrowie!</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal na piwo</string>
-    <string id="SettingsBeerStyle">Piwo</string>
-    <string id="SettingsGlassShape">Naczynie</string>
+    <string id="SettingsCaloriesPerBeer">kcal na napój</string>
+    <string id="SettingsDrink">Napój</string>
     <string id="SettingsBackground">Tło</string>
     <string id="SettingsRounding">Liczenie</string>
-    <string id="SettingsStartingBeers">Piwa na starcie</string>
-    <string id="SettingsAlertPopup">Pop-up co piwo</string>
-    <string id="SettingsAlertVibrate">Wibracja co piwo</string>
-    <string id="SettingsAlertTone">Dźwięk co piwo</string>
+    <string id="SettingsAlertPopup">Okienko za napój</string>
+    <string id="SettingsAlertVibrate">Wibracja za napój</string>
+    <string id="SettingsAlertTone">Dźwięk za napój</string>
 
-    <string id="StyleAmber">Bursztynowe / Lager</string>
-    <string id="StyleRedAle">Czerwone / Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Pils / Jasne</string>
-    <string id="StyleWheat">Pszeniczne</string>
-
-    <string id="ShapeMug">Kufel</string>
-    <string id="ShapeWeizen">Szklanka do weizena</string>
-    <string id="ShapePint">Pinta</string>
-    <string id="ShapeBottle">Butelka</string>
+    <string id="DrinkMug">Kufel (150 kcal)</string>
+    <string id="DrinkPils">Pils (140 kcal)</string>
+    <string id="DrinkWheat">Pszeniczne (150 kcal)</string>
+    <string id="DrinkBottle">Butelka (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Napój ziołowy (109 kcal)</string>
 
     <string id="BgAuto">Automatyczne</string>
     <string id="BgBlack">Czarne</string>
     <string id="BgWhite">Białe</string>
 
-    <string id="RoundDown">Całe piwa</string>
+    <string id="RoundDown">Całe napoje</string>
     <string id="RoundNearest">Zaokrąglone</string>
     <string id="RoundUp">W górę</string>
     <string id="RoundExact">Jedno miejsce po przecinku</string>

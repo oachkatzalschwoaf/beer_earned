@@ -1,23 +1,18 @@
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <setting propertyKey="@Properties.drink" title="@Strings.SettingsDrink">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.DrinkMug</listEntry>
+            <listEntry value="1">@Strings.DrinkPils</listEntry>
+            <listEntry value="2">@Strings.DrinkWheat</listEntry>
+            <listEntry value="3">@Strings.DrinkBottle</listEntry>
+            <listEntry value="4">@Strings.DrinkStout</listEntry>
+            <listEntry value="5">@Strings.DrinkCola</listEntry>
+            <listEntry value="6">@Strings.DrinkSpezi</listEntry>
+            <listEntry value="7">@Strings.DrinkHerbal</listEntry>
+        </settingConfig>
+    </setting>
     <setting propertyKey="@Properties.caloriesPerBeer" title="@Strings.SettingsCaloriesPerBeer">
         <settingConfig type="numeric" min="10" max="5000"/>
-    </setting>
-    <setting propertyKey="@Properties.beerStyle" title="@Strings.SettingsBeerStyle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.StylePils</listEntry>
-            <listEntry value="1">@Strings.StyleWheat</listEntry>
-            <listEntry value="2">@Strings.StyleAmber</listEntry>
-            <listEntry value="3">@Strings.StyleRedAle</listEntry>
-            <listEntry value="4">@Strings.StyleStout</listEntry>
-        </settingConfig>
-    </setting>
-    <setting propertyKey="@Properties.glassShape" title="@Strings.SettingsGlassShape">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.ShapeMug</listEntry>
-            <listEntry value="1">@Strings.ShapeWeizen</listEntry>
-            <listEntry value="2">@Strings.ShapePint</listEntry>
-            <listEntry value="3">@Strings.ShapeBottle</listEntry>
-        </settingConfig>
     </setting>
     <setting propertyKey="@Properties.background" title="@Strings.SettingsBackground">
         <settingConfig type="list">
@@ -33,9 +28,6 @@
             <listEntry value="2">@Strings.RoundUp</listEntry>
             <listEntry value="3">@Strings.RoundExact</listEntry>
         </settingConfig>
-    </setting>
-    <setting propertyKey="@Properties.startingBeers" title="@Strings.SettingsStartingBeers">
-        <settingConfig type="numeric" min="0" max="1000"/>
     </setting>
     <setting propertyKey="@Properties.alertPopup" title="@Strings.SettingsAlertPopup">
         <settingConfig type="boolean"/>

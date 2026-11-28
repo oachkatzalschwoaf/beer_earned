@@ -1,0 +1,13 @@
+Proměň svůj trénink v pivo! Beers Earned převádí spálené kalorie na piva a ukazuje sklenici, která se plní k dalšímu pivu, s pěnou a stoupajícími bublinkami. Za každé celé vydělané pivo vyskočí okno „Na zdraví!“.
+
+• Osm nápojů, každý s vlastním vzhledem: korbel, pils, pšeničné, lahvové pivo, stout, cola, Spezi nebo bylinná limonáda
+• Hodí se do každého rozvržení datové obrazovky, od 1 do 8 polí, na kulatých i obdélníkových displejích
+• Pozadí automatické, černé nebo bílé
+• Volitelně vibrace a tón za každé pivo
+• Kalorie přednastavené pro každý nápoj a upravitelné na číselné klávesnici
+• Počítání s jedním desetinným místem, v celých nápojích nebo zaokrouhleně
+• Ukládá se s aktivitou: Garmin Connect zobrazí graf piv, součet v přehledu a piva za okruh
+• Nastavení v aplikaci Connect IQ nebo přímo v hodinkách
+
+Bezplatné pokračování nápadu, na kterém stála již nedostupná aplikace „Beers Earned Plus“.
+Jen pro zábavu: hodnoty kalorií jsou odhady. Pijte zodpovědně.

@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Bier</string>
     <string id="BeersLabel">Bieren</string>
+    <string id="SodaLabel">Frisdrank</string>
+    <string id="SodasLabel">Frisdranken</string>
     <string id="AlertTitle">Proost!</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal per bier</string>
-    <string id="SettingsBeerStyle">Bier</string>
-    <string id="SettingsGlassShape">Glas</string>
+    <string id="SettingsCaloriesPerBeer">kcal per drankje</string>
+    <string id="SettingsDrink">Drank</string>
     <string id="SettingsBackground">Achtergrond</string>
     <string id="SettingsRounding">Telling</string>
-    <string id="SettingsStartingBeers">Bieren bij start</string>
-    <string id="SettingsAlertPopup">Pop-up per bier</string>
-    <string id="SettingsAlertVibrate">Trillen per bier</string>
-    <string id="SettingsAlertTone">Toon per bier</string>
+    <string id="SettingsAlertPopup">Pop-up per drankje</string>
+    <string id="SettingsAlertVibrate">Trillen per drankje</string>
+    <string id="SettingsAlertTone">Toon per drankje</string>
 
-    <string id="StyleAmber">Amber / Lager</string>
-    <string id="StyleRedAle">Rood / Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Pils / Helles</string>
-    <string id="StyleWheat">Weizen</string>
-
-    <string id="ShapeMug">Bierpul</string>
-    <string id="ShapeWeizen">Weizenglas</string>
-    <string id="ShapePint">Pintglas</string>
-    <string id="ShapeBottle">Fles</string>
+    <string id="DrinkMug">Bierpul (150 kcal)</string>
+    <string id="DrinkPils">Pils (140 kcal)</string>
+    <string id="DrinkWheat">Weizen (150 kcal)</string>
+    <string id="DrinkBottle">Fles (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Kruidenfris (109 kcal)</string>
 
     <string id="BgAuto">Automatisch</string>
     <string id="BgBlack">Zwart</string>
     <string id="BgWhite">Wit</string>
 
-    <string id="RoundDown">Hele bieren</string>
+    <string id="RoundDown">Hele drankjes</string>
     <string id="RoundNearest">Afgerond</string>
     <string id="RoundUp">Naar boven afgerond</string>
     <string id="RoundExact">Eén decimaal</string>

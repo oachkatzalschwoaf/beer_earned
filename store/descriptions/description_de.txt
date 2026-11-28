@@ -1,0 +1,13 @@
+Mach aus deinem Training Bier! Beers Earned rechnet die verbrannten Kalorien in Biere um und zeigt ein Glas, das sich bis zum nächsten Bier füllt, mit Schaumkrone und aufsteigenden Bläschen. Für jedes volle Bier gibt es ein „Prost!"-Pop-up.
+
+• Acht Getränke mit eigenem Aussehen: Krug, Pils, Weizen, Flaschenbier, Stout, Cola, Spezi oder Kräuterlimo
+• Passt in jedes Datenseiten-Layout, von 1 bis 8 Feldern, auf runden und eckigen Displays
+• Hintergrund automatisch, schwarz oder weiß
+• Auf Wunsch Vibration und Ton bei jedem Bier
+• Kalorien je Getränk voreingestellt und über ein Tastenfeld änderbar
+• Zählweise mit einer Nachkommastelle, in ganzen Getränken oder gerundet
+• Wird mit der Aktivität gespeichert: Garmin Connect zeigt ein Bier-Diagramm, die Summe in der Zusammenfassung und die Biere pro Runde
+• Einstellungen in der Connect-IQ-App oder direkt auf der Uhr
+
+Kostenlose Fortsetzung der Idee hinter dem eingestellten „Beers Earned Plus".
+Nur zum Spaß: Kalorienwerte sind Schätzungen. Bitte verantwortungsvoll genießen.

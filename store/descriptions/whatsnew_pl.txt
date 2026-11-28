@@ -1,0 +1,1 @@
+Piwo i szklanka to teraz jedno ustawienie „Napój”, nowe są cola, Spezi i napój ziołowy. Każdy napój ma swoje kalorie; własne wpiszesz na nowej klawiaturze numerycznej. Domyślnie jedno miejsce po przecinku, a każda aktywność zaczyna od zera.
