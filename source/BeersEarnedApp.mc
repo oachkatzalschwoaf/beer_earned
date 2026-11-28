@@ -23,7 +23,8 @@ class BeersEarnedApp extends Application.AppBase {
 
     // On-device settings, reachable from the activity's data screen settings.
     function getSettingsView() as [Views] or [Views, InputDelegates] or Null {
-        return [new BeerSettingsMenu(), new BeerSettingsDelegate()] as [Views, InputDelegates];
+        var menu = new BeerSettingsMenu();
+        return [menu, new BeerSettingsDelegate(menu)] as [Views, InputDelegates];
     }
 
     // Settings changed in Garmin Connect / Express, or in the on-device menu.

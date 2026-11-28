@@ -1,11 +1,12 @@
 <properties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <property id="drink" type="number">0</property>
     <property id="caloriesPerBeer" type="float">150.0</property>
-    <property id="beerStyle" type="number">2</property>
-    <property id="glassShape" type="number">0</property>
     <property id="background" type="number">0</property>
-    <property id="roundingMode" type="number">0</property>
-    <property id="startingBeers" type="float">0.0</property>
+    <property id="roundingMode" type="number">3</property>
     <property id="alertPopup" type="boolean">true</property>
     <property id="alertVibrate" type="boolean">false</property>
     <property id="alertTone" type="boolean">false</property>
+    <!-- Releases before 1.2.0; no longer settable, read once to pick the drink. -->
+    <property id="beerStyle" type="number">2</property>
+    <property id="glassShape" type="number">0</property>
 </properties>

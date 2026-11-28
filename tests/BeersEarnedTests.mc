@@ -38,23 +38,90 @@ function testFillFraction(logger as Logger) as Boolean {
 }
 
 (:test)
-function testNextPreset(logger as Logger) as Boolean {
-    var presets = [100, 150, 200] as Array<Number>;
-    var ok = TestKit.expect(logger, BeerSettings.nextPreset(presets, 150.0f), 200.0f, "next");
-    ok = TestKit.expect(logger, BeerSettings.nextPreset(presets, 165.0f), 200.0f, "custom value") && ok;
-    ok = TestKit.expect(logger, BeerSettings.nextPreset(presets, 200.0f), 100.0f, "wraps") && ok;
-    return ok;
+function testInvalidSettingsFallBack(logger as Logger) as Boolean {
+    TestKit.defaults();
+    TestKit.set(BeerSettings.KEY_DRINK, 99);
+    TestKit.set(BeerSettings.KEY_CALORIES, 0.0f);
+    var cfg = new BeerSettings.Config();
+    TestKit.defaults();
+    var ok = TestKit.expect(logger, cfg.drink, BeerSettings.DRINK_MUG, "drink");
+    return TestKit.expect(logger, cfg.caloriesPerBeer, 150.0f, "calories") && ok;
 }
 
 (:test)
-function testInvalidSettingsFallBack(logger as Logger) as Boolean {
+function testDrinkTables(logger as Logger) as Boolean {
+    var n = BeerSettings.DRINK_COUNT;
+    var ok = TestKit.expect(logger, BeerSettings.DRINK_SHAPES.size(), n, "shapes");
+    ok = TestKit.expect(logger, BeerSettings.DRINK_CALORIES.size(), n, "calories") && ok;
+    ok = TestKit.expect(logger, BeerRenderer.BEER_COLORS.size(), n, "colours") && ok;
+    ok = TestKit.expect(logger, BeerRenderer.HIGHLIGHT_COLORS.size(), n, "highlights") && ok;
+    return TestKit.expect(logger, (choiceLabels(BeerSettings.KEY_DRINK) as Array).size(), n, "labels") && ok;
+}
+
+(:test)
+function testNewDrinkBringsItsCalories(logger as Logger) as Boolean {
     TestKit.defaults();
-    Application.Properties.setValue(BeerSettings.KEY_CALORIES, 0.0f);
-    Application.Properties.setValue(BeerSettings.KEY_STYLE, 99);
+    TestKit.set(BeerSettings.KEY_DRINK, BeerSettings.DRINK_COLA);
+    BeerSettings.sync();
+    var cola = new BeerSettings.Config().caloriesPerBeer;
+    // The user's own value stays while the drink does.
+    TestKit.set(BeerSettings.KEY_CALORIES, 200.0f);
+    BeerSettings.sync();
+    BeerSettings.sync();
+    var own = new BeerSettings.Config().caloriesPerBeer;
+    // Another drink goes back to a default.
+    TestKit.set(BeerSettings.KEY_DRINK, BeerSettings.DRINK_PILS);
+    BeerSettings.sync();
+    var pils = new BeerSettings.Config().caloriesPerBeer;
+    TestKit.defaults();
+    var ok = TestKit.expect(logger, cola, 139.0f, "cola default");
+    ok = TestKit.expect(logger, own, 200.0f, "own value kept") && ok;
+    return TestKit.expect(logger, pils, 140.0f, "pils default") && ok;
+}
+
+(:test)
+function testCaloriesSetWithTheDrinkAreKept(logger as Logger) as Boolean {
+    TestKit.defaults();
+    TestKit.set(BeerSettings.KEY_DRINK, BeerSettings.DRINK_COLA);
+    TestKit.set(BeerSettings.KEY_CALORIES, 210.0f);
+    BeerSettings.sync();
     var cfg = new BeerSettings.Config();
     TestKit.defaults();
-    var ok = TestKit.expect(logger, cfg.caloriesPerBeer, 150.0f, "calories");
-    return TestKit.expect(logger, cfg.style, BeerSettings.STYLE_AMBER, "style") && ok;
+    return TestKit.expect(logger, cfg.caloriesPerBeer, 210.0f, "one change, both settings");
+}
+
+(:test)
+function testUpgradeFromOldSettings(logger as Logger) as Boolean {
+    TestKit.firstRun();
+    TestKit.set(BeerSettings.KEY_OLD_STYLE, 4);
+    TestKit.set(BeerSettings.KEY_OLD_SHAPE, BeerSettings.SHAPE_PINT);
+    TestKit.set(BeerSettings.KEY_CALORIES, 180.0f);
+    BeerSettings.sync();
+    var cfg = new BeerSettings.Config();
+    TestKit.defaults();
+    var ok = TestKit.expect(logger, cfg.drink, BeerSettings.DRINK_STOUT, "stout");
+    return TestKit.expect(logger, cfg.caloriesPerBeer, 180.0f, "calories kept") && ok;
+}
+
+(:test)
+function testDrinkChosenBeforeFirstRun(logger as Logger) as Boolean {
+    TestKit.firstRun();
+    TestKit.set(BeerSettings.KEY_DRINK, BeerSettings.DRINK_COLA);
+    BeerSettings.sync();
+    var cfg = new BeerSettings.Config();
+    TestKit.defaults();
+    var ok = TestKit.expect(logger, cfg.drink, BeerSettings.DRINK_COLA, "choice kept");
+    return TestKit.expect(logger, cfg.caloriesPerBeer, 139.0f, "cola calories") && ok;
+}
+
+(:test)
+function testMilestonesFollowTheDrink(logger as Logger) as Boolean {
+    TestKit.defaults();
+    TestKit.set(BeerSettings.KEY_DRINK, BeerSettings.DRINK_COLA);
+    var view = new RecordingView();
+    TestKit.feed(view, [0, 138, 139, 278] as Array<Number>);
+    TestKit.defaults();
+    return TestKit.expect(logger, view.celebrated.toString(), "[1, 2]", "one alert per cola");
 }
 
 (:test)
@@ -78,12 +145,12 @@ function testNoAlertWhenSettingsJump(logger as Logger) as Boolean {
     TestKit.defaults();
     var view = new RecordingView();
     TestKit.feed(view, [0, 100] as Array<Number>);
-    Application.Properties.setValue(BeerSettings.KEY_START, 5.0f);
+    TestKit.set(BeerSettings.KEY_CALORIES, 20.0f);
     view.reloadSettings();
     TestKit.feed(view, [110, 160] as Array<Number>);
     TestKit.defaults();
-    // 0.67 -> 5.73 by the setting: no alert; 5.73 -> 6.07 by burning calories: alert.
-    return TestKit.expect(logger, view.celebrated.toString(), "[6]", "offset change re-baselines");
+    // 0.7 -> 5.5 by the setting: no alert; 5.5 -> 8.0 by burning calories: alert.
+    return TestKit.expect(logger, view.celebrated.toString(), "[8]", "new calories re-baseline");
 }
 
 (:test)
@@ -125,10 +192,25 @@ class TestKit {
         }
     }
 
+    static function set(key as String, value as Number or Float) as Void {
+        Application.Properties.setValue(key, value);
+    }
+
+    // The shipped defaults, already seen by sync().
     static function defaults() as Void {
-        Application.Properties.setValue(BeerSettings.KEY_CALORIES, 150.0f);
-        Application.Properties.setValue(BeerSettings.KEY_START, 0.0f);
-        Application.Properties.setValue(BeerSettings.KEY_STYLE, BeerSettings.STYLE_AMBER);
+        set(BeerSettings.KEY_DRINK, BeerSettings.DRINK_MUG);
+        set(BeerSettings.KEY_CALORIES, 150.0f);
+        set(BeerSettings.KEY_OLD_STYLE, 2);
+        set(BeerSettings.KEY_OLD_SHAPE, BeerSettings.SHAPE_MUG);
+        Application.Storage.setValue(BeerSettings.SEEN_DRINK, BeerSettings.DRINK_MUG);
+        Application.Storage.setValue(BeerSettings.SEEN_CALORIES, 150.0f);
+    }
+
+    // As right after installing or updating: sync() has never run.
+    static function firstRun() as Void {
+        defaults();
+        Application.Storage.deleteValue(BeerSettings.SEEN_DRINK);
+        Application.Storage.deleteValue(BeerSettings.SEEN_CALORIES);
     }
 
     static function expect(logger as Logger, actual as Object?, expected as Object?, what as String) as Boolean {

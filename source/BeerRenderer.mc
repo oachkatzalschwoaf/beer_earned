@@ -5,7 +5,7 @@ import Toybox.Lang;
 class BeerScene {
     var text as String = "0";                       // the count as displayed
     var frac as Float = 0.0f;                       // fill level: progress toward the next beer, 0..1
-    var style as Number = BeerSettings.STYLE_AMBER;
+    var drink as Number = BeerSettings.DRINK_MUG;   // colours and foam
     var shape as Number = BeerSettings.SHAPE_MUG;
     var bg as Number = Graphics.COLOR_BLACK;
     var fg as Number = Graphics.COLOR_WHITE;
@@ -19,16 +19,24 @@ class BeerScene {
 module BeerRenderer {
 
     // Palette-exact colours (components 00/55/AA/FF) so 64-colour MIP screens show
-    // them undithered. Indexed by BeerSettings.STYLE_*.
-    const BEER_COLORS = [0xFFFF55, 0xFFAA55, 0xFFAA00, 0xAA0000, 0x550000] as Array<Number>;
-    const HIGHLIGHT_COLORS = [0xFFFFAA, 0xFFFFAA, 0xFFFF55, 0xFF5500, 0xAA5500] as Array<Number>;
+    // them undithered. Indexed by BeerSettings.DRINK_*.
+    const BEER_COLORS = [0xFFAA00, 0xFFFF55, 0xFFAA55, 0xFFAA00, 0x550000,
+        0x550000, 0xAA5500, 0xFFFF00] as Array<Number>;
+    const HIGHLIGHT_COLORS = [0xFFFF55, 0xFFFFAA, 0xFFFFAA, 0xFFFF55, 0xAA5500,
+        0xAA0000, 0xFF5500, 0xFFFFAA] as Array<Number>;
 
     // Half-width profiles of the glass shapes as (t, f) pairs with strictly increasing
     // t: 0 at the rim to 1 at the base, f = fraction of the maximum half-width.
     const PROFILE_WEIZEN = [0.0f, 0.86f, 0.12f, 1.0f, 0.45f, 0.80f, 0.70f, 0.60f, 0.90f, 0.48f, 1.0f, 0.54f] as Array<Float>;
     const PROFILE_PINT = [0.0f, 0.94f, 0.07f, 1.0f, 0.16f, 0.93f, 1.0f, 0.72f] as Array<Float>;
     const PROFILE_BOTTLE = [0.0f, 0.42f, 0.06f, 0.42f, 0.07f, 0.34f, 0.30f, 0.34f, 0.45f, 0.92f, 0.53f, 1.0f, 0.96f, 1.0f, 1.0f, 0.92f] as Array<Float>;
-    const BOTTLE_CAP = 0.07f; // the top 7% of the bottle is its solid cap
+    const PROFILE_COLA = [0.0f, 0.40f, 0.065f, 0.40f, 0.075f, 0.32f, 0.17f, 0.34f, 0.27f, 0.50f,
+        0.37f, 0.80f, 0.45f, 0.97f, 0.50f, 1.0f, 0.56f, 0.95f, 0.66f, 0.74f, 0.72f, 0.72f,
+        0.80f, 0.80f, 0.89f, 0.96f, 0.95f, 0.96f, 1.0f, 0.82f] as Array<Float>;
+    const BOTTLE_CAP = 0.07f; // the top 7% of a bottle is its solid cap
+
+    // The coloured waves on the Spezi bottle's label, top to bottom.
+    const LABEL_COLORS = [0xFFAA00, 0xFF5500, 0xFF0000, 0xFF0055, 0x5500AA] as Array<Number>;
 
     // Candidate fonts for the count; the largest one that fits wins.
     const FONTS = [
@@ -42,6 +50,7 @@ module BeerRenderer {
         if (shape == BeerSettings.SHAPE_WEIZEN) { return 0.46f; }
         if (shape == BeerSettings.SHAPE_PINT) { return 0.66f; }
         if (shape == BeerSettings.SHAPE_BOTTLE) { return 0.42f; }
+        if (shape == BeerSettings.SHAPE_COLA_BOTTLE) { return 0.40f; }
         return 0.92f; // mug including its handle
     }
 
@@ -100,9 +109,9 @@ class BeerPainter {
     private var _tw as Float = 0.0f; // max text box when the count goes inside the vessel
     private var _th as Float = 0.0f;
 
-    // Vessel geometry: centre line and wall thickness. Glasses use a half-width
-    // profile scaled to _maxHalf; the mug (_prof == null) a rounded-rectangle interior
-    // _iL/_iW/_iR. _iT/_iB bound the interior vertically for both.
+    // Vessel geometry: centre line and wall thickness. Glasses and bottles use a
+    // half-width profile scaled to _maxHalf; the mug (_prof == null) a
+    // rounded-rectangle interior _iL/_iW/_iR. _iT/_iB bound the interior vertically.
     private var _mid as Float = 0.0f;
     private var _wall as Float = 2.0f;
     private var _prof as Array<Float>? = null;
@@ -160,6 +169,12 @@ class BeerPainter {
             _glassShell(gx);
         }
         _drawContents();
+        if (_s.shape == BeerSettings.SHAPE_COLA_BOTTLE) {
+            _dc.setColor(0xFF0000, Graphics.COLOR_TRANSPARENT); // plain red label
+            _dc.fillPolygon(_polygon(_wall, _top + _gh * 0.41f, _top + _gh * 0.59f));
+        } else if (_s.drink == BeerSettings.DRINK_SPEZI) {
+            _waveLabel();
+        }
         if (withText) {
             _countInside();
         }
@@ -298,7 +313,7 @@ class BeerPainter {
         _th = _gh * 0.62f;
     }
 
-    // Weizen, pint and bottle: symmetric silhouettes described by a half-width profile.
+    // Weizen, pint and the bottles: symmetric silhouettes described by a half-width profile.
     private function _glassShell(gx as Float) as Void {
         var textT = 0.45f;
         var capT = 0.0f;
@@ -310,6 +325,10 @@ class BeerPainter {
             _prof = BeerRenderer.PROFILE_BOTTLE;
             textT = 0.74f;
             capT = BeerRenderer.BOTTLE_CAP;
+        } else if (_s.shape == BeerSettings.SHAPE_COLA_BOTTLE) {
+            _prof = BeerRenderer.PROFILE_COLA;
+            textT = 0.50f;
+            capT = BeerRenderer.BOTTLE_CAP;
         }
         _maxHalf = _gh * BeerRenderer.aspect(_s.shape) / 2;
         _mid = gx + _maxHalf;
@@ -320,6 +339,10 @@ class BeerPainter {
         _dc.fillPolygon(_polygon(0.0f, _top, _top + _gh));
         _dc.setColor(_s.bg, Graphics.COLOR_TRANSPARENT);
         _dc.fillPolygon(_polygon(_wall, _iT, _iB));
+        if (_s.shape == BeerSettings.SHAPE_COLA_BOTTLE) {
+            _dc.setColor(0xFF0000, Graphics.COLOR_TRANSPARENT); // red cap
+            _dc.fillPolygon(_polygon(0.0f, _top, _top + capT * _gh));
+        }
 
         _ty = _top + _gh * textT;
         _tw = 2 * _halfAt(_ty) - 4;
@@ -333,14 +356,15 @@ class BeerPainter {
         if (beerH < 1) {
             return;
         }
-        _dc.setColor(BeerRenderer.BEER_COLORS[_s.style], Graphics.COLOR_TRANSPARENT);
+        _dc.setColor(BeerRenderer.BEER_COLORS[_s.drink], Graphics.COLOR_TRANSPARENT);
         _band(level, _iB);
 
-        var foamH = _gh * 0.12f;
+        var soft = _s.drink >= BeerSettings.DRINK_FIRST_SOFT;
+        var foamH = _gh * (soft ? 0.035f : 0.12f); // soft drinks only fizz
         var cap = beerH < 4 ? beerH : beerH * 0.45f;
         if (foamH > cap) { foamH = cap; }
 
-        _dc.setColor(BeerRenderer.HIGHLIGHT_COLORS[_s.style], Graphics.COLOR_TRANSPARENT);
+        _dc.setColor(BeerRenderer.HIGHLIGHT_COLORS[_s.drink], Graphics.COLOR_TRANSPARENT);
         if (_prof == null) {
             // Dimpled-glass facets on the mug.
             var y0 = level + foamH + _wall;
@@ -353,11 +377,42 @@ class BeerPainter {
         }
         _bubbles(level + foamH);
 
-        // White head on dark backgrounds; cream for stouts and on light backgrounds.
-        _dc.setColor((!BeerRenderer.isLight(_s.bg) && _s.style != BeerSettings.STYLE_STOUT) ? 0xFFFFFF : 0xFFFFAA,
-            Graphics.COLOR_TRANSPARENT);
+        // White head on dark backgrounds; cream for stouts and on light backgrounds,
+        // tan for the cola drinks.
+        var head = (!BeerRenderer.isLight(_s.bg) && _s.drink != BeerSettings.DRINK_STOUT) ? 0xFFFFFF : 0xFFFFAA;
+        if (_s.drink == BeerSettings.DRINK_COLA || _s.drink == BeerSettings.DRINK_SPEZI) {
+            head = 0xFFAA55;
+        }
+        _dc.setColor(head, Graphics.COLOR_TRANSPARENT);
         _band(level, level + foamH);
         _crest(level, foamH);
+    }
+
+    // Label of coloured waves across the bottle's body, plus a band around its neck.
+    // Runs after the contents, so it may reuse the interior bounds for the label's.
+    private function _waveLabel() as Void {
+        _dc.setColor(BeerRenderer.LABEL_COLORS[1], Graphics.COLOR_TRANSPARENT);
+        _dc.fillPolygon(_polygon(_wall, _top + _gh * 0.17f, _top + _gh * 0.25f));
+
+        var half = _maxHalf - _wall;
+        _iL = _mid - half;
+        _iW = 2 * half;
+        _iT = _top + _gh * 0.60f; // leaves the fill level visible above and below
+        _iB = _top + _gh * 0.87f;
+        var n = BeerRenderer.LABEL_COLORS.size();
+        var step = (_iB - _iT) / n;
+        var amp = step * 0.45f;
+        var right = _iL + _iW;
+        _dc.setClip(_iL, _iT, _iW, _iB - _iT);
+        // Top band first; each further one covers everything below its wavy upper edge.
+        for (var i = 0; i < n; i++) {
+            var y = i == 0 ? _iT - 2 * amp : _iT + step * i;
+            _dc.setColor(BeerRenderer.LABEL_COLORS[i], Graphics.COLOR_TRANSPARENT);
+            _dc.fillPolygon([[_iL, y], [_iL + _iW * 0.17f, y - amp], [_iL + _iW * 0.33f, y - amp],
+                [_iL + _iW * 0.67f, y + amp], [_iL + _iW * 0.83f, y + amp], [right, y],
+                [right, _iB + 1], [_iL, _iB + 1]] as Array<Point2D>);
+        }
+        _dc.clearClip();
     }
 
     // Fill the interior between heights y0 and y1 with the current colour.

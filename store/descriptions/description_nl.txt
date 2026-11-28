@@ -1,0 +1,13 @@
+Maak van je training bier! Beers Earned rekent de verbrande calorieën om in bier en toont een glas dat volloopt tot het volgende, met schuimkraag en opstijgende belletjes. Elk vol bier dat je verdient levert een "Proost!"-pop-up op.
+
+• Acht drankjes met elk een eigen uiterlijk: bierpul, pils, weizen, flesje bier, stout, cola, Spezi of kruidenfris
+• Past in elke datapagina, van 1 tot 8 velden, op ronde en rechthoekige schermen
+• Achtergrond automatisch, zwart of wit
+• Optioneel trillen en een toon bij elk bier
+• Calorieën per drankje vooraf ingesteld en aan te passen met een cijferblok
+• Tel met één decimaal, in hele drankjes of afgerond
+• Opgeslagen bij je activiteit: Garmin Connect toont een biergrafiek, het totaal in de samenvatting en de bieren per ronde
+• Instellingen in de Connect IQ-app of direct op het horloge
+
+Gratis voortzetting van het idee achter het niet meer beschikbare "Beers Earned Plus".
+Alleen voor de lol: calorieën zijn schattingen. Geniet, maar drink met mate.

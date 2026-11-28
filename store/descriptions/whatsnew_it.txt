@@ -1,0 +1,1 @@
+Birra e bicchiere sono ora un'unica impostazione «Bevanda», con in più cola, Spezi e bibita alle erbe. Ogni bevanda ha le sue calorie; inserisci le tue con il nuovo tastierino. Un decimale come predefinito, e ogni attività parte da zero.

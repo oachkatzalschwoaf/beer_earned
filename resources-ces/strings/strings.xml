@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Pivo</string>
     <string id="BeersLabel">Piva</string>
+    <string id="SodaLabel">Limonáda</string>
+    <string id="SodasLabel">Limonády</string>
     <string id="AlertTitle">Na zdraví!</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal na pivo</string>
-    <string id="SettingsBeerStyle">Pivo</string>
-    <string id="SettingsGlassShape">Sklenice</string>
+    <string id="SettingsCaloriesPerBeer">kcal na nápoj</string>
+    <string id="SettingsDrink">Nápoj</string>
     <string id="SettingsBackground">Pozadí</string>
     <string id="SettingsRounding">Počítání</string>
-    <string id="SettingsStartingBeers">Piva na začátku</string>
-    <string id="SettingsAlertPopup">Pop-up za pivo</string>
-    <string id="SettingsAlertVibrate">Vibrace za pivo</string>
-    <string id="SettingsAlertTone">Tón za pivo</string>
+    <string id="SettingsAlertPopup">Okno za nápoj</string>
+    <string id="SettingsAlertVibrate">Vibrace za nápoj</string>
+    <string id="SettingsAlertTone">Tón za nápoj</string>
 
-    <string id="StyleAmber">Polotmavé / Amber</string>
-    <string id="StyleRedAle">Červené / Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Světlý ležák</string>
-    <string id="StyleWheat">Pšeničné / Weizen</string>
-
-    <string id="ShapeMug">Korbel</string>
-    <string id="ShapeWeizen">Sklenice na weizen</string>
-    <string id="ShapePint">Pinta</string>
-    <string id="ShapeBottle">Láhev</string>
+    <string id="DrinkMug">Korbel (150 kcal)</string>
+    <string id="DrinkPils">Pils (140 kcal)</string>
+    <string id="DrinkWheat">Pšeničné (150 kcal)</string>
+    <string id="DrinkBottle">Láhev (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Bylinná limonáda (109 kcal)</string>
 
     <string id="BgAuto">Automaticky</string>
     <string id="BgBlack">Černé</string>
     <string id="BgWhite">Bílé</string>
 
-    <string id="RoundDown">Celá piva</string>
+    <string id="RoundDown">Celé nápoje</string>
     <string id="RoundNearest">Zaokrouhleno</string>
     <string id="RoundUp">Nahoru</string>
     <string id="RoundExact">Jedno desetinné místo</string>

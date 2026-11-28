@@ -1,0 +1,13 @@
+Trasforma il tuo allenamento in birre! Beers Earned converte le calorie bruciate in birre e mostra un bicchiere che si riempie fino alla prossima, con schiuma e bollicine che salgono. Ogni birra intera guadagnata fa comparire un pop-up «Cin cin!».
+
+• Otto bevande, ognuna con il suo aspetto: boccale, pils, weizen, birra in bottiglia, stout, cola, Spezi o bibita alle erbe
+• Si adatta a ogni pagina dati, da 1 a 8 campi, su schermi rotondi e rettangolari
+• Sfondo automatico, nero o bianco
+• Vibrazione e tono opzionali per ogni birra
+• Calorie preimpostate per ogni bevanda e modificabili con un tastierino
+• Conta con un decimale, in bevande intere o arrotondate
+• Salvato con l'attività: Garmin Connect mostra un grafico delle birre, il totale nel riepilogo e le birre per giro
+• Impostazioni nell'app Connect IQ o direttamente sull'orologio
+
+Continuazione gratuita dell'idea alla base di «Beers Earned Plus», non più disponibile.
+Solo per divertimento: le calorie sono stime. Bevi responsabilmente.

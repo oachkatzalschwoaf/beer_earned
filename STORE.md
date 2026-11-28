@@ -91,13 +91,13 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > shows a glass filling up toward your next one, with foam and rising bubbles. Every whole
 > beer earned gets a "Cheers!" pop-up.
 >
-> • Mug, wheat-beer glass, pint glass or bottle
-> • Pilsner, Hefeweizen, Amber/Lager, Red Ale or Stout
+> • Eight drinks, each with its own look: mug, Pilsner, wheat beer, bottled beer, stout,
+>   cola, Spezi or herbal soda
 > • Fits any data screen layout, from 1 to 8 fields, on round and rectangular screens
 > • Automatic, black or white background
 > • Optional vibration and tone for each beer
-> • Calories per beer adjustable (default 150 kcal), plus beers at start
-> • Count whole beers, rounded, or with one decimal
+> • Calories per drink preset for each one and adjustable on a number pad
+> • Count with one decimal, in whole drinks or rounded
 > • Saved with your activity: Garmin Connect shows a beers chart, the total in the summary,
 >   and beers per lap
 > • Settings in the Connect IQ app or right on the watch
@@ -105,7 +105,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > A free continuation of the idea behind the discontinued "Beers Earned Plus".
 > Just for fun: calorie values are estimates. Please drink responsibly.
 
-**What's new (1.1.0):** New languages: French, Spanish, Italian, Dutch, Czech, Polish and Portuguese. Now also on fēnix 9, Forerunner 70 and 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 and Explore 3, and on the GPSMAP 67 / H1, Montana 7 and eTrex Touch handhelds.
+**What's new (1.2.0):** Beer and glass are now one "Drink" setting, and cola, Spezi and herbal soda are new. Each drink brings its calories; type your own on the new number pad. The count shows one decimal by default and every activity starts at zero.
 
 ### Deutsch
 
@@ -117,13 +117,13 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > und zeigt ein Glas, das sich bis zum nächsten Bier füllt, mit Schaumkrone und
 > aufsteigenden Bläschen. Für jedes volle Bier gibt es ein „Prost!"-Pop-up.
 >
-> • Bierkrug, Weißbierglas, Pintglas oder Flasche
-> • Pils, Hefeweizen, Märzen/Amber, Rotbier oder Stout
+> • Acht Getränke mit eigenem Aussehen: Krug, Pils, Weizen, Flaschenbier, Stout, Cola,
+>   Spezi oder Kräuterlimo
 > • Passt in jedes Datenseiten-Layout, von 1 bis 8 Feldern, auf runden und eckigen Displays
 > • Hintergrund automatisch, schwarz oder weiß
 > • Auf Wunsch Vibration und Ton bei jedem Bier
-> • Kalorien pro Bier einstellbar (Standard 150 kcal), dazu Biere zu Beginn
-> • Zählweise ganze Biere, gerundet oder mit einer Nachkommastelle
+> • Kalorien je Getränk voreingestellt und über ein Tastenfeld änderbar
+> • Zählweise mit einer Nachkommastelle, in ganzen Getränken oder gerundet
 > • Wird mit der Aktivität gespeichert: Garmin Connect zeigt ein Bier-Diagramm, die Summe
 >   in der Zusammenfassung und die Biere pro Runde
 > • Einstellungen in der Connect-IQ-App oder direkt auf der Uhr
@@ -131,7 +131,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Kostenlose Fortsetzung der Idee hinter dem eingestellten „Beers Earned Plus".
 > Nur zum Spaß: Kalorienwerte sind Schätzungen. Bitte verantwortungsvoll genießen.
 
-**Neuigkeiten (1.1.0):** Neue Sprachen: Französisch, Spanisch, Italienisch, Niederländisch, Tschechisch, Polnisch und Portugiesisch. Läuft jetzt auch auf fēnix 9, Forerunner 70 und 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 und Explore 3 sowie auf den Handgeräten GPSMAP 67 / H1, Montana 7 und eTrex Touch.
+**Neuigkeiten (1.2.0):** Bier und Glas sind jetzt eine Einstellung „Getränk“, neu sind Cola, Spezi und Kräuterlimo. Jedes Getränk bringt seine Kalorien mit; eigene Werte gibst du über das neue Tastenfeld ein. Gezählt wird standardmäßig mit einer Nachkommastelle, und jede Aktivität startet bei null.
 
 ### Français
 
@@ -143,14 +143,14 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > bières et affiche un verre qui se remplit jusqu'à la prochaine, avec mousse et bulles qui
 > montent. Chaque bière entière gagnée déclenche un pop-up « Santé ! ».
 >
-> • Chope, verre à Weizen, pinte ou bouteille
-> • Pils, blanche (Weizen), ambrée/lager, rousse (Red Ale) ou stout
+> • Huit boissons, chacune avec son style : chope, pils, blanche, bière en bouteille,
+>   stout, cola, Spezi ou soda aux herbes
 > • S'adapte à toutes les pages de données, de 1 à 8 champs, sur écrans ronds et
 >   rectangulaires
 > • Fond automatique, noir ou blanc
 > • Vibration et son en option pour chaque bière
-> • Calories par bière réglables (150 kcal par défaut), plus des bières au départ
-> • Compte en bières entières, arrondi ou avec une décimale
+> • Calories préréglées pour chaque boisson, modifiables sur un pavé numérique
+> • Compte avec une décimale, en boissons entières ou arrondi
 > • Enregistré avec ton activité : Garmin Connect affiche un graphique des bières, le total
 >   dans le résumé et les bières par circuit
 > • Réglages dans l'application Connect IQ ou directement sur la montre
@@ -158,7 +158,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Suite gratuite de l'idée du « Beers Earned Plus », qui n'est plus disponible.
 > Juste pour le plaisir : les calories sont des estimations. À consommer avec modération.
 
-**Nouveautés (1.1.0) :** Nouvelles langues : français, espagnol, italien, néerlandais, tchèque, polonais et portugais. Compatible avec fēnix 9, Forerunner 70 et 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 et Explore 3, ainsi qu'avec les GPS portables GPSMAP 67 / H1, Montana 7 et eTrex Touch.
+**Nouveautés (1.2.0) :** Bière et verre forment un seul réglage « Boisson », avec en plus cola, Spezi et soda aux herbes. Chaque boisson apporte ses calories ; saisis les tiennes sur le nouveau pavé numérique. Une décimale par défaut, et chaque activité commence à zéro.
 
 ### Español
 
@@ -170,14 +170,14 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > en cervezas y muestra un vaso que se llena hasta la siguiente, con espuma y burbujas que
 > suben. Cada cerveza entera ganada trae un aviso de «¡Salud!».
 >
-> • Jarra, vaso de trigo, pinta o botella
-> • Pilsner, trigo (Weizen), ámbar/lager, roja (Red Ale) o stout
+> • Ocho bebidas, cada una con su aspecto: jarra, pilsner, trigo, botellín, stout, cola,
+>   Spezi o refresco de hierbas
 > • Se adapta a cualquier pantalla de datos, de 1 a 8 campos, en pantallas redondas y
 >   rectangulares
 > • Fondo automático, negro o blanco
 > • Vibración y tono opcionales con cada cerveza
-> • Calorías por cerveza ajustables (150 kcal por defecto), más cervezas al inicio
-> • Cuenta cervezas enteras, redondeadas o con un decimal
+> • Calorías preajustadas para cada bebida y modificables con un teclado numérico
+> • Cuenta con un decimal, en bebidas enteras o redondeadas
 > • Se guarda con tu actividad: Garmin Connect muestra un gráfico de cervezas, el total en
 >   el resumen y las cervezas por vuelta
 > • Ajustes en la app Connect IQ o directamente en el reloj
@@ -185,7 +185,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Continuación gratuita de la idea del ya retirado «Beers Earned Plus».
 > Solo por diversión: las calorías son estimaciones. Bebe con moderación.
 
-**Novedades (1.1.0):** Nuevos idiomas: francés, español, italiano, neerlandés, checo, polaco y portugués. Compatible con fēnix 9, Forerunner 70 y 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 y Explore 3, y con los GPS de mano GPSMAP 67 / H1, Montana 7 y eTrex Touch.
+**Novedades (1.2.0):** Cerveza y vaso son ahora un solo ajuste «Bebida», con cola, Spezi y refresco de hierbas como novedades. Cada bebida trae sus calorías; escribe las tuyas en el nuevo teclado numérico. Por defecto un decimal, y cada actividad empieza en cero.
 
 ### Italiano
 
@@ -197,13 +197,13 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > e mostra un bicchiere che si riempie fino alla prossima, con schiuma e bollicine che
 > salgono. Ogni birra intera guadagnata fa comparire un pop-up «Cin cin!».
 >
-> • Boccale, bicchiere da Weizen, pinta o bottiglia
-> • Pils, Weizen, ambrata/lager, rossa (Red Ale) o stout
+> • Otto bevande, ognuna con il suo aspetto: boccale, pils, weizen, birra in bottiglia,
+>   stout, cola, Spezi o bibita alle erbe
 > • Si adatta a ogni pagina dati, da 1 a 8 campi, su schermi rotondi e rettangolari
 > • Sfondo automatico, nero o bianco
 > • Vibrazione e tono opzionali per ogni birra
-> • Calorie per birra regolabili (150 kcal predefinite), più birre all'inizio
-> • Conta birre intere, arrotondate o con un decimale
+> • Calorie preimpostate per ogni bevanda e modificabili con un tastierino
+> • Conta con un decimale, in bevande intere o arrotondate
 > • Salvato con l'attività: Garmin Connect mostra un grafico delle birre, il totale nel
 >   riepilogo e le birre per giro
 > • Impostazioni nell'app Connect IQ o direttamente sull'orologio
@@ -211,7 +211,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Continuazione gratuita dell'idea alla base di «Beers Earned Plus», non più disponibile.
 > Solo per divertimento: le calorie sono stime. Bevi responsabilmente.
 
-**Novità (1.1.0):** Nuove lingue: francese, spagnolo, italiano, olandese, ceco, polacco e portoghese. Compatibile con fēnix 9, Forerunner 70 e 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 ed Explore 3 e con i palmari GPSMAP 67 / H1, Montana 7 ed eTrex Touch.
+**Novità (1.2.0):** Birra e bicchiere sono ora un'unica impostazione «Bevanda», con in più cola, Spezi e bibita alle erbe. Ogni bevanda ha le sue calorie; inserisci le tue con il nuovo tastierino. Un decimale come predefinito, e ogni attività parte da zero.
 
 ### Nederlands
 
@@ -223,13 +223,13 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > een glas dat volloopt tot het volgende, met schuimkraag en opstijgende belletjes. Elk vol
 > bier dat je verdient levert een "Proost!"-pop-up op.
 >
-> • Bierpul, weizenglas, pintglas of fles
-> • Pils, weizen, amber/lager, rood (Red Ale) of stout
+> • Acht drankjes met elk een eigen uiterlijk: bierpul, pils, weizen, flesje bier, stout,
+>   cola, Spezi of kruidenfris
 > • Past in elke datapagina, van 1 tot 8 velden, op ronde en rechthoekige schermen
 > • Achtergrond automatisch, zwart of wit
 > • Optioneel trillen en een toon bij elk bier
-> • Calorieën per bier instelbaar (standaard 150 kcal), plus bieren bij de start
-> • Tel hele bieren, afgerond of met één decimaal
+> • Calorieën per drankje vooraf ingesteld en aan te passen met een cijferblok
+> • Tel met één decimaal, in hele drankjes of afgerond
 > • Opgeslagen bij je activiteit: Garmin Connect toont een biergrafiek, het totaal in de
 >   samenvatting en de bieren per ronde
 > • Instellingen in de Connect IQ-app of direct op het horloge
@@ -237,7 +237,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Gratis voortzetting van het idee achter het niet meer beschikbare "Beers Earned Plus".
 > Alleen voor de lol: calorieën zijn schattingen. Geniet, maar drink met mate.
 
-**Nieuw (1.1.0):** Nieuwe talen: Frans, Spaans, Italiaans, Nederlands, Tsjechisch, Pools en Portugees. Werkt nu ook op fēnix 9, Forerunner 70 en 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 en Explore 3, en op de handhelds GPSMAP 67 / H1, Montana 7 en eTrex Touch.
+**Nieuw (1.2.0):** Bier en glas zijn nu één instelling "Drank", nieuw zijn cola, Spezi en kruidenfris. Elk drankje heeft zijn eigen calorieën; voer eigen waarden in met het nieuwe cijferblok. Standaard één decimaal, en elke activiteit begint bij nul.
 
 ### Čeština
 
@@ -249,14 +249,14 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > sklenici, která se plní k dalšímu pivu, s pěnou a stoupajícími bublinkami. Za každé celé
 > vydělané pivo vyskočí okno „Na zdraví!“.
 >
-> • Korbel, sklenice na weizen, pinta nebo láhev
-> • Světlý ležák, pšeničné, polotmavé/amber, červené (Red Ale) nebo stout
+> • Osm nápojů, každý s vlastním vzhledem: korbel, pils, pšeničné, lahvové pivo, stout,
+>   cola, Spezi nebo bylinná limonáda
 > • Hodí se do každého rozvržení datové obrazovky, od 1 do 8 polí, na kulatých
 >   i obdélníkových displejích
 > • Pozadí automatické, černé nebo bílé
 > • Volitelně vibrace a tón za každé pivo
-> • Nastavitelné kalorie na pivo (výchozí 150 kcal) a piva na začátku
-> • Počítání celých piv, zaokrouhleně nebo s jedním desetinným místem
+> • Kalorie přednastavené pro každý nápoj a upravitelné na číselné klávesnici
+> • Počítání s jedním desetinným místem, v celých nápojích nebo zaokrouhleně
 > • Ukládá se s aktivitou: Garmin Connect zobrazí graf piv, součet v přehledu a piva za
 >   okruh
 > • Nastavení v aplikaci Connect IQ nebo přímo v hodinkách
@@ -264,7 +264,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Bezplatné pokračování nápadu, na kterém stála již nedostupná aplikace „Beers Earned Plus“.
 > Jen pro zábavu: hodnoty kalorií jsou odhady. Pijte zodpovědně.
 
-**Novinky (1.1.0):** Nové jazyky: francouzština, španělština, italština, nizozemština, čeština, polština a portugalština. Nově podporuje fēnix 9, Forerunner 70 a 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 a Explore 3 a ruční navigace GPSMAP 67 / H1, Montana 7 a eTrex Touch.
+**Novinky (1.2.0):** Pivo a sklenice jsou nyní jedno nastavení „Nápoj“, nově je tu cola, Spezi a bylinná limonáda. Každý nápoj má své kalorie; vlastní hodnotu zadáte na nové číselné klávesnici. Výchozí je jedno desetinné místo a každá aktivita začíná od nuly.
 
 ### Polski
 
@@ -276,14 +276,14 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > szklankę, która napełnia się do następnego piwa, z pianą i unoszącymi się bąbelkami. Za
 > każde pełne zarobione piwo pojawia się okienko „Na zdrowie!”.
 >
-> • Kufel, szklanka do weizena, pinta lub butelka
-> • Pils/jasne, pszeniczne, bursztynowe/lager, czerwone (Red Ale) lub stout
+> • Osiem napojów, każdy z własnym wyglądem: kufel, pils, pszeniczne, piwo butelkowe,
+>   stout, cola, Spezi lub napój ziołowy
 > • Pasuje do każdego układu ekranu danych, od 1 do 8 pól, na okrągłych i prostokątnych
 >   ekranach
 > • Tło automatyczne, czarne lub białe
 > • Opcjonalnie wibracja i dźwięk przy każdym piwie
-> • Regulowana liczba kalorii na piwo (domyślnie 150 kcal) oraz piwa na starcie
-> • Liczenie całych piw, z zaokrągleniem lub z jednym miejscem po przecinku
+> • Kalorie ustawione dla każdego napoju, do zmiany na klawiaturze numerycznej
+> • Liczenie z jednym miejscem po przecinku, w całych napojach lub z zaokrągleniem
 > • Zapisywane z aktywnością: Garmin Connect pokazuje wykres piw, sumę w podsumowaniu
 >   i piwa na okrążenie
 > • Ustawienia w aplikacji Connect IQ lub bezpośrednio na zegarku
@@ -291,7 +291,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Darmowa kontynuacja pomysłu wycofanej aplikacji „Beers Earned Plus”.
 > Tylko dla zabawy: wartości kalorii są szacunkowe. Pij odpowiedzialnie.
 
-**Nowości (1.1.0):** Nowe języki: francuski, hiszpański, włoski, niderlandzki, czeski, polski i portugalski. Obsługa fēnix 9, Forerunner 70 i 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 i Explore 3 oraz nawigacji ręcznych GPSMAP 67 / H1, Montana 7 i eTrex Touch.
+**Nowości (1.2.0):** Piwo i szklanka to teraz jedno ustawienie „Napój”, nowe są cola, Spezi i napój ziołowy. Każdy napój ma swoje kalorie; własne wpiszesz na nowej klawiaturze numerycznej. Domyślnie jedno miejsce po przecinku, a każda aktywność zaczyna od zera.
 
 ### Português
 
@@ -303,14 +303,14 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > cervejas e mostra um copo que se enche até a próxima, com espuma e bolhas subindo. Cada
 > cerveja inteira conquistada traz um pop-up de "Saúde!".
 >
-> • Caneca, copo de trigo, copo pint ou garrafa
-> • Pilsen, trigo (Weizen), âmbar/lager, red ale ou stout
+> • Oito bebidas, cada uma com seu visual: caneca, pilsen, trigo, cerveja de garrafa,
+>   stout, cola, Spezi ou refrigerante de ervas
 > • Cabe em qualquer layout de tela de dados, de 1 a 8 campos, em telas redondas e
 >   retangulares
 > • Fundo automático, preto ou branco
 > • Vibração e som opcionais a cada cerveja
-> • Calorias por cerveja ajustáveis (padrão 150 kcal), além de cervejas no início
-> • Conte cervejas inteiras, arredondadas ou com uma casa decimal
+> • Calorias predefinidas para cada bebida e ajustáveis em um teclado numérico
+> • Conte com uma casa decimal, em bebidas inteiras ou arredondadas
 > • Salvo com a atividade: o Garmin Connect mostra um gráfico de cervejas, o total no
 >   resumo e as cervejas por volta
 > • Configurações no app Connect IQ ou direto no relógio
@@ -318,7 +318,7 @@ Titel, Beschreibung und Neuigkeiten aus dem passenden Abschnitt unten einfügen.
 > Continuação gratuita da ideia por trás do descontinuado "Beers Earned Plus".
 > Só por diversão: as calorias são estimativas. Beba com moderação.
 
-**Novidades (1.1.0):** Novos idiomas: francês, espanhol, italiano, holandês, tcheco, polonês e português. Agora compatível com fēnix 9, Forerunner 70 e 170, Enduro 4, MARQ (Gen 3), Approach S72, D2 Mach 2 Pro, Edge 1060 e Explore 3, e com os GPS portáteis GPSMAP 67 / H1, Montana 7 e eTrex Touch.
+**Novidades (1.2.0):** Cerveja e copo agora são um só ajuste "Bebida", com cola, Spezi e refrigerante de ervas como novidades. Cada bebida traz suas calorias; digite as suas no novo teclado numérico. O padrão é uma casa decimal, e cada atividade começa do zero.
 
 ## Store-Material
 
@@ -330,4 +330,4 @@ Die Maße folgen Garmins Brand Guidelines.
 | `store/hero_1440x720.png` | Hero- bzw. Cover-Bild 1440×720, ohne Text, gilt also für alle Sprachen |
 | `store/ondevice_icon_amoled_128.png` | On-Device-Store-Icon 128×128 für Farbdisplays |
 | `store/ondevice_icon_mip_128.png` | dasselbe auf die 64-Farben-Palette der MIP-Displays reduziert, als indizierte PNG |
-| `store/screenshots/` | Simulator-Screenshots (fēnix 8 47 mm und fēnix 8 Solar 51 mm) |
+| `store/screenshots/` | Simulator-Screenshots: `1_` bis `5_` für den Store (fēnix 8 47 mm). Reserve: drei Felder auf der fēnix 8 Solar 51 mm und alle Getränke im Edge-1040-Rahmen |

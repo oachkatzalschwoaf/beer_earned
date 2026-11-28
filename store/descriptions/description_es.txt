@@ -1,0 +1,13 @@
+¡Convierte tu entrenamiento en cervezas! Beers Earned convierte las calorías que quemas en cervezas y muestra un vaso que se llena hasta la siguiente, con espuma y burbujas que suben. Cada cerveza entera ganada trae un aviso de «¡Salud!».
+
+• Ocho bebidas, cada una con su aspecto: jarra, pilsner, trigo, botellín, stout, cola, Spezi o refresco de hierbas
+• Se adapta a cualquier pantalla de datos, de 1 a 8 campos, en pantallas redondas y rectangulares
+• Fondo automático, negro o blanco
+• Vibración y tono opcionales con cada cerveza
+• Calorías preajustadas para cada bebida y modificables con un teclado numérico
+• Cuenta con un decimal, en bebidas enteras o redondeadas
+• Se guarda con tu actividad: Garmin Connect muestra un gráfico de cervezas, el total en el resumen y las cervezas por vuelta
+• Ajustes en la app Connect IQ o directamente en el reloj
+
+Continuación gratuita de la idea del ya retirado «Beers Earned Plus».
+Solo por diversión: las calorías son estimaciones. Bebe con moderación.

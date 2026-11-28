@@ -2,34 +2,32 @@
     <string id="AppName">Beers Earned</string>
     <string id="BeerLabel">Bière</string>
     <string id="BeersLabel">Bières</string>
+    <string id="SodaLabel">Soda</string>
+    <string id="SodasLabel">Sodas</string>
     <string id="AlertTitle">Santé !</string>
 
-    <string id="SettingsCaloriesPerBeer">kcal par bière</string>
-    <string id="SettingsBeerStyle">Bière</string>
-    <string id="SettingsGlassShape">Verre</string>
+    <string id="SettingsCaloriesPerBeer">kcal par boisson</string>
+    <string id="SettingsDrink">Boisson</string>
     <string id="SettingsBackground">Fond</string>
     <string id="SettingsRounding">Comptage</string>
-    <string id="SettingsStartingBeers">Bières au départ</string>
-    <string id="SettingsAlertPopup">Pop-up par bière</string>
-    <string id="SettingsAlertVibrate">Vibration par bière</string>
-    <string id="SettingsAlertTone">Son par bière</string>
+    <string id="SettingsAlertPopup">Pop-up par boisson</string>
+    <string id="SettingsAlertVibrate">Vibration par boisson</string>
+    <string id="SettingsAlertTone">Son par boisson</string>
 
-    <string id="StyleAmber">Ambrée / Lager</string>
-    <string id="StyleRedAle">Rousse / Red Ale</string>
-    <string id="StyleStout">Stout / Porter</string>
-    <string id="StylePils">Pils / Blonde</string>
-    <string id="StyleWheat">Blanche / Weizen</string>
-
-    <string id="ShapeMug">Chope</string>
-    <string id="ShapeWeizen">Verre à Weizen</string>
-    <string id="ShapePint">Pinte</string>
-    <string id="ShapeBottle">Bouteille</string>
+    <string id="DrinkMug">Chope (150 kcal)</string>
+    <string id="DrinkPils">Pils (140 kcal)</string>
+    <string id="DrinkWheat">Blanche (150 kcal)</string>
+    <string id="DrinkBottle">Bouteille (140 kcal)</string>
+    <string id="DrinkStout">Stout (150 kcal)</string>
+    <string id="DrinkCola">Cola (139 kcal)</string>
+    <string id="DrinkSpezi">Spezi (132 kcal)</string>
+    <string id="DrinkHerbal">Soda aux herbes (109 kcal)</string>
 
     <string id="BgAuto">Automatique</string>
     <string id="BgBlack">Noir</string>
     <string id="BgWhite">Blanc</string>
 
-    <string id="RoundDown">Bières entières</string>
+    <string id="RoundDown">Boissons entières</string>
     <string id="RoundNearest">Arrondi</string>
     <string id="RoundUp">Arrondi supérieur</string>
     <string id="RoundExact">Une décimale</string>

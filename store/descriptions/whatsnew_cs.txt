@@ -1,0 +1,1 @@
+Pivo a sklenice jsou nyní jedno nastavení „Nápoj“, nově je tu cola, Spezi a bylinná limonáda. Každý nápoj má své kalorie; vlastní hodnotu zadáte na nové číselné klávesnici. Výchozí je jedno desetinné místo a každá aktivita začíná od nuly.
